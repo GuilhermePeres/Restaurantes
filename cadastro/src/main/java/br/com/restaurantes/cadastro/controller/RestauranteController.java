@@ -1,6 +1,7 @@
 package br.com.restaurantes.cadastro.controller;
 
 import br.com.restaurantes.cadastro.exception.ErroAcessarRepositorioException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +21,11 @@ import java.util.Optional;
 public class RestauranteController {
 
 	private GerenciarRestauranteUsecase gerenciarRestauranteUsecase;
+
+	@Autowired
+	public RestauranteController(GerenciarRestauranteUsecase gerenciarRestauranteUsecase){
+		this.gerenciarRestauranteUsecase = gerenciarRestauranteUsecase;
+	}
 	
 	@PostMapping
 	public ResponseEntity<?> cadastrar(@Valid @RequestBody RestauranteJson restauranteJson) {
@@ -41,7 +47,7 @@ public class RestauranteController {
 	}
 
 	@GetMapping("tipoCozinha/{tipoCozinha}")
-	public ResponseEntity<?> buscarRestaurantePorTipoCozinha(String tipoCozinha){
+	public ResponseEntity<?> buscarRestaurantePorTipoCozinha(@PathVariable String tipoCozinha){
 		try {
 			Optional<Restaurante> restaurante = gerenciarRestauranteUsecase.buscarRestaurantePorTipoCozinha(tipoCozinha);
 
@@ -53,7 +59,7 @@ public class RestauranteController {
 	}
 
 	@GetMapping("localizacao/{localizacao}")
-	public ResponseEntity<?> buscarRestaurantePorLocalizacao(String localizacao){
+	public ResponseEntity<?> buscarRestaurantePorLocalizacao(@PathVariable String localizacao){
 		try {
 			Optional<Restaurante> restaurante = gerenciarRestauranteUsecase.buscarRestaurantePorLocalizacao(localizacao);
 

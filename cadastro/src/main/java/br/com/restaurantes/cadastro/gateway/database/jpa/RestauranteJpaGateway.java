@@ -73,13 +73,12 @@ public class RestauranteJpaGateway implements RestauranteGateway {
 	}
 	
 	private RestauranteEntity mapToEntity(Restaurante restaurante) {
-		return RestauranteEntity.builder()
-				.id(restaurante.getId())
-				.nome(restaurante.getNome())
-				.quantidadeLugares(restaurante.getQuantidadeLugares())
-				.localizacao(restaurante.getLocalizacao())
-				.tipoCozinha(restaurante.getTipoCozinha())
-				.horarioFuncionamento(restaurante.getHorarioFuncionamento())
-				.build();
+		return new RestauranteEntity(
+				restaurante.getId(),
+				restaurante.getNome(),
+				restaurante.getQuantidadeLugares(),
+				restaurante.getLocalizacao(),
+				restaurante.getTipoCozinha(),
+				restaurante.getHorarioFuncionamento());
 	}
 }

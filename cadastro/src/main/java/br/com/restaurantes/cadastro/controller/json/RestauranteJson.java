@@ -11,7 +11,6 @@ public class RestauranteJson {
 	private Long id;
 	@NotBlank
 	private String nome;
-	@NotBlank
 	private Integer quantidadeLugares;
 	@NotBlank
 	private String localizacao;

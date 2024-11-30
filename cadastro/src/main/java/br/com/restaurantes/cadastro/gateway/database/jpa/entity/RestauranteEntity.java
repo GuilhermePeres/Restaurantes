@@ -9,8 +9,9 @@ import lombok.*;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name="Restaurante")
-@Builder
 public class RestauranteEntity  {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
