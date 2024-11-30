@@ -1,6 +1,6 @@
 package br.com.restaurantes.cadastroRestaurante.controller;
 
-import br.com.restaurantes.cadastroRestaurante.exception.ErroAoAcessarRepositorioException;
+import br.com.restaurantes.cadastroRestaurante.exception.ErroAcessarRepositorioException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,7 +36,7 @@ public class RestauranteController {
 			return restaurante.map(r -> ResponseEntity.ok(mapToJson(restaurante))).orElse(ResponseEntity.notFound().build());
 
 		} catch (Exception e) {
-			throw new ErroAoAcessarRepositorioException();
+			throw new ErroAcessarRepositorioException();
 		}
 	}
 
@@ -48,7 +48,7 @@ public class RestauranteController {
 			return restaurante.map(r -> ResponseEntity.ok(mapToJson(restaurante))).orElse(ResponseEntity.notFound().build());
 
 		} catch (Exception e) {
-			throw new ErroAoAcessarRepositorioException();
+			throw new ErroAcessarRepositorioException();
 		}
 	}
 
@@ -60,7 +60,7 @@ public class RestauranteController {
 			return restaurante.map(r -> ResponseEntity.ok(mapToJson(restaurante))).orElse(ResponseEntity.notFound().build());
 
 		} catch (Exception e) {
-			throw new ErroAoAcessarRepositorioException();
+			throw new ErroAcessarRepositorioException();
 		}
 	}
 
