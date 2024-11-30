@@ -1,7 +1,7 @@
-package br.com.restaurantes.cadastroRestaurante.usecase;
+package br.com.restaurantes.cadastro.usecase;
 
-import br.com.restaurantes.cadastroRestaurante.domain.Restaurante;
-import br.com.restaurantes.cadastroRestaurante.gateway.RestauranteGateway;
+import br.com.restaurantes.cadastro.domain.Restaurante;
+import br.com.restaurantes.cadastro.gateway.RestauranteGateway;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

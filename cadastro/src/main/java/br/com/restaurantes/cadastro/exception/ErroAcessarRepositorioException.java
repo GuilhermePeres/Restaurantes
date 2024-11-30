@@ -1,4 +1,4 @@
-package br.com.restaurantes.cadastroRestaurante.exception;
+package br.com.restaurantes.cadastro.exception;
 
 import lombok.Getter;
 

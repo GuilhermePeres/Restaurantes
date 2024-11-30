@@ -1,12 +1,5 @@
-package br.com.restaurantes.cadastroRestaurante.domain;
+package br.com.restaurantes.cadastro.controller.json;
 
-import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
-import java.util.List;
-
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -14,11 +7,16 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class Restaurante {
+public class RestauranteJson {
 	private Long id;
+	@NotBlank
 	private String nome;
+	@NotBlank
 	private Integer quantidadeLugares;
+	@NotBlank
 	private String localizacao;
+	@NotNull
 	private String tipoCozinha;
+	@NotBlank
 	private String horarioFuncionamento;
 }

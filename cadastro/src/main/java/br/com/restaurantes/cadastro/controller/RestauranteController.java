@@ -1,12 +1,12 @@
-package br.com.restaurantes.cadastroRestaurante.controller;
+package br.com.restaurantes.cadastro.controller;
 
-import br.com.restaurantes.cadastroRestaurante.exception.ErroAcessarRepositorioException;
+import br.com.restaurantes.cadastro.exception.ErroAcessarRepositorioException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import br.com.restaurantes.cadastroRestaurante.controller.json.RestauranteJson;
-import br.com.restaurantes.cadastroRestaurante.domain.Restaurante;
-import br.com.restaurantes.cadastroRestaurante.usecase.GerenciarRestauranteUsecase;
+import br.com.restaurantes.cadastro.controller.json.RestauranteJson;
+import br.com.restaurantes.cadastro.domain.Restaurante;
+import br.com.restaurantes.cadastro.usecase.GerenciarRestauranteUsecase;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Primeiro commit do projeto">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastroRestaurante/src/main/java/br/com/restaurantes/cadastroRestaurante/controller/RestauranteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastroRestaurante/src/main/java/br/com/restaurantes/cadastroRestaurante/controller/RestauranteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastroRestaurante/src/main/java/br/com/restaurantes/cadastroRestaurante/exception/ErroAcessarRepositorioException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastroRestaurante/src/main/java/br/com/restaurantes/cadastroRestaurante/exception/ErroAcessarRepositorioException.java" afterDir="false" />
+    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Ajustando o commit do projeto">
+      <change beforePath="$PROJECT_DIR$/cadastroRestaurante/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastroRestaurante/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastroRestaurante/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastroRestaurante/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastroRestaurante/src/main/java/br/com/restaurantes/cadastroRestaurante/RestauranteServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/RestauranteServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastroRestaurante/src/main/java/br/com/restaurantes/cadastroRestaurante/controller/RestauranteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastroRestaurante/src/main/java/br/com/restaurantes/cadastroRestaurante/controller/json/RestauranteJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/json/RestauranteJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastroRestaurante/src/main/java/br/com/restaurantes/cadastroRestaurante/domain/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/domain/Restaurante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastroRestaurante/src/main/java/br/com/restaurantes/cadastroRestaurante/exception/ErroAcessarRepositorioException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/exception/ErroAcessarRepositorioException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastroRestaurante/src/main/java/br/com/restaurantes/cadastroRestaurante/exception/SystemBaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/exception/SystemBaseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastroRestaurante/src/main/java/br/com/restaurantes/cadastroRestaurante/gateway/RestauranteGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/RestauranteGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastroRestaurante/src/main/java/br/com/restaurantes/cadastroRestaurante/usecase/GerenciarRestauranteUsecase.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastroRestaurante/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,11 +68,11 @@
   </component>
   <component name="RunManager">
     <configuration name="RestauranteServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastroRestaurante.RestauranteServiceApplication" />
-      <module name="cadastroRestaurante" />
+      <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.RestauranteServiceApplication" />
+      <module name="cadastro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.restaurantes.cadastroRestaurante.*" />
+          <option name="PATTERN" value="br.com.restaurantes.cadastro.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,11 +103,20 @@
       <option name="project" value="LOCAL" />
       <updated>1732998235177</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ajustando o commit do projeto">
+      <option name="closed" value="true" />
+      <created>1732998511905</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732998511905</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primeiro commit do projeto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primeiro commit do projeto" />
+    <MESSAGE value="Ajustando o commit do projeto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustando o commit do projeto" />
   </component>
 </project>

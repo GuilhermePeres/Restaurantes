@@ -10,6 +10,7 @@
       <list>
         <option value="$PROJECT_DIR$/Reservas/pom.xml" />
         <option value="$PROJECT_DIR$/cadastroRestaurante/pom.xml" />
+        <option value="$PROJECT_DIR$/cadastro/pom.xml" />
       </list>
     </option>
   </component>

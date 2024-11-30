@@ -1,6 +1,6 @@
-package br.com.restaurantes.cadastroRestaurante.gateway;
+package br.com.restaurantes.cadastro.gateway;
 
-import br.com.restaurantes.cadastroRestaurante.domain.Restaurante;
+import br.com.restaurantes.cadastro.domain.Restaurante;
 
 import java.util.Optional;
 

@@ -11,7 +11,7 @@
 	<groupId>br.com.restaurantes</groupId>
 	<artifactId>Restaurantes</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CadastroRestaurantes</name>
+	<name>Cadastro</name>
 	<description>Serviço de manipulação do cadastro de restaurantes</description>
 	<url/>
 	<licenses>

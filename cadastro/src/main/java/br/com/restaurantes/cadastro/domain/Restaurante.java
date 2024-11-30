@@ -1,22 +1,15 @@
-package br.com.restaurantes.cadastroRestaurante.controller.json;
+package br.com.restaurantes.cadastro.domain;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class RestauranteJson {
+public class Restaurante {
 	private Long id;
-	@NotBlank
 	private String nome;
-	@NotBlank
 	private Integer quantidadeLugares;
-	@NotBlank
 	private String localizacao;
-	@NotNull
 	private String tipoCozinha;
-	@NotBlank
 	private String horarioFuncionamento;
 }
