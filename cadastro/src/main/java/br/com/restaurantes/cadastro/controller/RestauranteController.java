@@ -12,7 +12,9 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
@@ -36,23 +38,29 @@ public class RestauranteController {
 
 	@GetMapping("/{nome}")
 	public ResponseEntity<?> buscarRestaurantePorNome(@PathVariable String nome) {
-		Optional<Restaurante> restaurante = gerenciarRestauranteUsecase.buscarRestaurantePorNome(nome);
+		List<Restaurante> restaurantes = gerenciarRestauranteUsecase.buscarRestaurantePorNome(nome);
 
-		return restaurante.map(r -> ResponseEntity.ok(mapToJson(restaurante))).orElse(ResponseEntity.notFound().build());
+		List<RestauranteJson> restauranteJsons = restaurantes.stream().map(this::mapToJson).collect(Collectors.toList());
+
+		return ResponseEntity.ok(restauranteJsons);
 	}
 
 	@GetMapping("tipoCozinha/{tipoCozinha}")
 	public ResponseEntity<?> buscarRestaurantePorTipoCozinha(@PathVariable String tipoCozinha){
-		Optional<Restaurante> restaurante = gerenciarRestauranteUsecase.buscarRestaurantePorTipoCozinha(tipoCozinha);
+		List<Restaurante> restaurantes = gerenciarRestauranteUsecase.buscarRestaurantePorTipoCozinha(tipoCozinha);
 
-		return restaurante.map(r -> ResponseEntity.ok(mapToJson(restaurante))).orElse(ResponseEntity.notFound().build());
+		List<RestauranteJson> restauranteJsons = restaurantes.stream().map(this::mapToJson).collect(Collectors.toList());
+
+		return ResponseEntity.ok(restauranteJsons);
 	}
 
 	@GetMapping("localizacao/{localizacao}")
 	public ResponseEntity<?> buscarRestaurantePorLocalizacao(@PathVariable String localizacao){
-		Optional<Restaurante> restaurante = gerenciarRestauranteUsecase.buscarRestaurantePorLocalizacao(localizacao);
+		List<Restaurante> restaurantes = gerenciarRestauranteUsecase.buscarRestaurantePorLocalizacao(localizacao);
 
-		return restaurante.map(r -> ResponseEntity.ok(mapToJson(restaurante))).orElse(ResponseEntity.notFound().build());
+		List<RestauranteJson> restauranteJsons = restaurantes.stream().map(this::mapToJson).collect(Collectors.toList());
+
+		return ResponseEntity.ok(restauranteJsons);
 	}
 
 	@PutMapping("/{id}")
@@ -88,5 +96,16 @@ public class RestauranteController {
 				r.getTipoCozinha(),
 				r.getHorarioFuncionamento()
 		)).orElse(null);
+	}
+
+	private RestauranteJson mapToJson(Restaurante restaurante) {
+		return new RestauranteJson(
+				restaurante.getId(),
+				restaurante.getNome(),
+				restaurante.getQuantidadeLugares(),
+				restaurante.getLocalizacao(),
+				restaurante.getTipoCozinha(),
+				restaurante.getHorarioFuncionamento()
+		);
 	}
 }

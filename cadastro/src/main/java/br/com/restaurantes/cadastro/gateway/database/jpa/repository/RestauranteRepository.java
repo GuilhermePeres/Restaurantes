@@ -11,7 +11,7 @@ import java.util.Optional;
 @Repository
 @Transactional
 public interface RestauranteRepository extends JpaRepository<RestauranteEntity, Long>{
-	Optional<RestauranteEntity> findByNome(String nome);
-	Optional<RestauranteEntity> findByLocalizacao(String localizacao);
-	Optional<RestauranteEntity> findByTipoCozinha(String tipoCozinha);
+	List<RestauranteEntity> findByNome(String nome);
+	List<RestauranteEntity> findByLocalizacao(String localizacao);
+	List<RestauranteEntity> findByTipoCozinha(String tipoCozinha);
 }

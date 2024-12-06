@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Component
@@ -58,21 +59,36 @@ public class RestauranteJpaGateway implements RestauranteGateway {
 	}
 
 	@Override
-	public Optional<Restaurante> buscarRestaurantePorNome(String nome) {
-		return Optional.ofNullable(restauranteRepository.findByNome(nome).map(this::mapToDomain)
-                .orElseThrow(RestauranteNaoEncontradoException::new));
+	public List<Restaurante> buscarRestaurantePorNome(String nome) {
+		List<RestauranteEntity> restaurantes = restauranteRepository.findByNome(nome);
+
+		if(restaurantes.isEmpty()){
+			throw new RestauranteNaoEncontradoException();
+		}
+
+		return restaurantes.stream().map(this::mapToDomain).collect(Collectors.toList());
 	}
 
 	@Override
-	public Optional<Restaurante> buscarRestaurantePorLocalizacao(String localizacao) {
-		return Optional.ofNullable(restauranteRepository.findByLocalizacao(localizacao).map(this::mapToDomain)
-				.orElseThrow(RestauranteNaoEncontradoException::new));
+	public List<Restaurante> buscarRestaurantePorLocalizacao(String localizacao) {
+		List<RestauranteEntity> restaurantes = restauranteRepository.findByLocalizacao(localizacao);
+
+		if(restaurantes.isEmpty()){
+			throw new RestauranteNaoEncontradoException();
+		}
+
+		return restaurantes.stream().map(this::mapToDomain).collect(Collectors.toList());
 	}
 
 	@Override
-	public Optional<Restaurante> buscarRestaurantePorTipoCozinha(String tipoCozinha) {
-		return Optional.ofNullable(restauranteRepository.findByTipoCozinha(tipoCozinha).map(this::mapToDomain)
-				.orElseThrow(RestauranteNaoEncontradoException::new));
+	public List<Restaurante> buscarRestaurantePorTipoCozinha(String tipoCozinha) {
+		List<RestauranteEntity> restaurantes = restauranteRepository.findByTipoCozinha(tipoCozinha);
+
+		if(restaurantes.isEmpty()){
+			throw new RestauranteNaoEncontradoException();
+		}
+
+		return restaurantes.stream().map(this::mapToDomain).collect(Collectors.toList());
 	}
 	
 	private Restaurante mapToDomain(RestauranteEntity restauranteEntity) {

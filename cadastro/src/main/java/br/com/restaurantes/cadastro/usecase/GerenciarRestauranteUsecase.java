@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Slf4j
@@ -19,15 +20,15 @@ public class GerenciarRestauranteUsecase {
         restauranteGateway.cadastrarRestaurante(restaurante);
     }
 
-    public Optional<Restaurante> buscarRestaurantePorNome(String nome){
+    public List<Restaurante> buscarRestaurantePorNome(String nome){
         return restauranteGateway.buscarRestaurantePorNome(nome);
     }
 
-    public Optional<Restaurante> buscarRestaurantePorTipoCozinha(String tipoCozinha){
+    public List<Restaurante> buscarRestaurantePorTipoCozinha(String tipoCozinha){
         return restauranteGateway.buscarRestaurantePorTipoCozinha(tipoCozinha);
     }
 
-    public Optional<Restaurante> buscarRestaurantePorLocalizacao(String localizacao) {
+    public List<Restaurante> buscarRestaurantePorLocalizacao(String localizacao) {
         return restauranteGateway.buscarRestaurantePorLocalizacao(localizacao);
     }
 
