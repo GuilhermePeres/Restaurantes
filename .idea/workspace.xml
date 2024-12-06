@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Corrigindo o serviço para cadastrar e buscar restaurantes">
-      <change afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/RestauranteApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerTest.java" afterDir="false" />
+    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Commit inicial de testes unitários">
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/exception/RestauranteNaoEncontradoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/infraestrutura/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/exception/ErroAcessarRepositorioException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/exception/ErroAcessarRepositorioException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/RestauranteGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/RestauranteGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/database/jpa/repository/RestauranteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/database/jpa/repository/RestauranteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecase.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +42,9 @@
     &quot;accountId&quot;: &quot;8b57a154-7e22-49d6-bd1d-775f795e0306&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -46,25 +55,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.RestauranteServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Docker.cadastro: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.cadastroRestaurante: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/guilh/OneDrive/Área de Trabalho/Minha pasta/Faculdade/Pós FIAP/Fases/workspace_all/intellij/workspaces/TechChallenge/Backup/Restaurantes&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.RestauranteServiceApplication.executor": "Debug",
+    "Docker.Docker.executor": "Run",
+    "Docker.cadastro.postgres: Compose Deployment.executor": "Run",
+    "Docker.cadastro: Compose Deployment.executor": "Run",
+    "Docker.cadastroRestaurante: Compose Deployment.executor": "Run",
+    "Maven.Restaurantes [clean].executor": "Run",
+    "Maven.Restaurantes [install].executor": "Run",
+    "Maven.Restaurantes [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/guilh/OneDrive/Área de Trabalho/Minha pasta/Faculdade/Pós FIAP/Fases/workspace_all/intellij/workspaces/TechChallenge/Backup/Restaurantes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\guilh\OneDrive\Área de Trabalho\Minha pasta\Faculdade\Pós FIAP\Fases\workspace_all\intellij\workspaces\TechChallenge\Restaurantes\cadastroRestaurante" />
       <recent name="C:\Users\guilh\OneDrive\Área de Trabalho\Minha pasta\Faculdade\Pós FIAP\Fases\workspace_all\intellij\workspaces\TechChallenge\Restaurantes\cadastroRestaurante\src" />
       <recent name="C:\Users\guilh\OneDrive\Área de Trabalho\Minha pasta\Faculdade\Pós FIAP\Fases\workspace_all\intellij\workspaces\TechChallenge\Restaurantes" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.restaurantes.cadastro.infraestrutura" />
+      <recent name="br.com.restaurantes.cadastro.exception" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.RestauranteServiceApplication">
     <configuration name="RestauranteServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -80,9 +98,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Docker" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="cadastro/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cadastro.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="cadastro/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.RestauranteServiceApplication" />
+      <item itemvalue="Docker.Docker" />
+      <item itemvalue="Docker.cadastro.postgres: Compose Deployment" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.RestauranteServiceApplication" />
+        <item itemvalue="Docker.cadastro.postgres: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -143,52 +193,89 @@
       <option name="project" value="LOCAL" />
       <updated>1733004823819</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Commit inicial de testes unitários">
+      <option name="closed" value="true" />
+      <created>1733354550880</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733354550880</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primeiro commit do projeto" />
     <MESSAGE value="Ajustando o commit do projeto" />
     <MESSAGE value="Corrigindo o serviço para cadastrar e buscar restaurantes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo o serviço para cadastrar e buscar restaurantes" />
+    <MESSAGE value="Commit inicial de testes unitários" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit inicial de testes unitários" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
-          <line>73</line>
+          <line>71</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGateway.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
-          <line>63</line>
+          <line>52</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
-          <line>51</line>
+          <line>45</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
+          <line>61</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/infraestrutura/GlobalExceptionHandler.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/RestauranteGateway.java</url>
+          <line>9</line>
+          <properties class="br.com.restaurantes.cadastro.gateway.RestauranteGateway" method="buscarRestaurantePorTipoCozinha">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="java.util.Optional" memberName="value" />
         <PinnedItemInfo parentTag="br.com.restaurantes.cadastro.exception.ErroAcessarRepositorioException" memberName="cause" />
       </pinned-members>
     </pin-to-top-manager>

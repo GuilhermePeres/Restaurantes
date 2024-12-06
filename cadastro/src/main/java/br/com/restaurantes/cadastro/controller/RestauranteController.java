@@ -36,38 +36,36 @@ public class RestauranteController {
 
 	@GetMapping("/{nome}")
 	public ResponseEntity<?> buscarRestaurantePorNome(@PathVariable String nome) {
-		try {
-			Optional<Restaurante> restaurante = gerenciarRestauranteUsecase.buscarRestaurantePorNome(nome);
+		Optional<Restaurante> restaurante = gerenciarRestauranteUsecase.buscarRestaurantePorNome(nome);
 
-			return restaurante.map(r -> ResponseEntity.ok(mapToJson(restaurante))).orElse(ResponseEntity.notFound().build());
-
-		} catch (Exception e) {
-			throw new ErroAcessarRepositorioException();
-		}
+		return restaurante.map(r -> ResponseEntity.ok(mapToJson(restaurante))).orElse(ResponseEntity.notFound().build());
 	}
 
 	@GetMapping("tipoCozinha/{tipoCozinha}")
 	public ResponseEntity<?> buscarRestaurantePorTipoCozinha(@PathVariable String tipoCozinha){
-		try {
-			Optional<Restaurante> restaurante = gerenciarRestauranteUsecase.buscarRestaurantePorTipoCozinha(tipoCozinha);
+		Optional<Restaurante> restaurante = gerenciarRestauranteUsecase.buscarRestaurantePorTipoCozinha(tipoCozinha);
 
-			return restaurante.map(r -> ResponseEntity.ok(mapToJson(restaurante))).orElse(ResponseEntity.notFound().build());
-
-		} catch (Exception e) {
-			throw new ErroAcessarRepositorioException();
-		}
+		return restaurante.map(r -> ResponseEntity.ok(mapToJson(restaurante))).orElse(ResponseEntity.notFound().build());
 	}
 
 	@GetMapping("localizacao/{localizacao}")
 	public ResponseEntity<?> buscarRestaurantePorLocalizacao(@PathVariable String localizacao){
-		try {
-			Optional<Restaurante> restaurante = gerenciarRestauranteUsecase.buscarRestaurantePorLocalizacao(localizacao);
+		Optional<Restaurante> restaurante = gerenciarRestauranteUsecase.buscarRestaurantePorLocalizacao(localizacao);
 
-			return restaurante.map(r -> ResponseEntity.ok(mapToJson(restaurante))).orElse(ResponseEntity.notFound().build());
+		return restaurante.map(r -> ResponseEntity.ok(mapToJson(restaurante))).orElse(ResponseEntity.notFound().build());
+	}
 
-		} catch (Exception e) {
-			throw new ErroAcessarRepositorioException();
-		}
+	@PutMapping("/{id}")
+	public ResponseEntity<?> atualizarRestaurante(@PathVariable Long id, @RequestBody RestauranteJson restauranteJson){
+		Optional<Restaurante> restaurante = gerenciarRestauranteUsecase.atualizarRestaurante(id, mapToDomain(restauranteJson));
+
+		return restaurante.map(r -> ResponseEntity.ok(mapToJson(restaurante))).orElse(ResponseEntity.notFound().build());
+	}
+
+
+	@DeleteMapping("/{id}")
+	public void removerRestaurante(@PathVariable Long id){
+		gerenciarRestauranteUsecase.removerRestaurante(id);
 	}
 
 	private Restaurante mapToDomain(RestauranteJson restauranteJson) {

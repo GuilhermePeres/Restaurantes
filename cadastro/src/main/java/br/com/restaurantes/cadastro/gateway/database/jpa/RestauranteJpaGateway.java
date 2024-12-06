@@ -2,6 +2,7 @@ package br.com.restaurantes.cadastro.gateway.database.jpa;
 
 import br.com.restaurantes.cadastro.domain.Restaurante;
 import br.com.restaurantes.cadastro.exception.ErroAcessarRepositorioException;
+import br.com.restaurantes.cadastro.exception.RestauranteNaoEncontradoException;
 import br.com.restaurantes.cadastro.gateway.RestauranteGateway;
 import br.com.restaurantes.cadastro.gateway.database.jpa.entity.RestauranteEntity;
 import br.com.restaurantes.cadastro.gateway.database.jpa.repository.RestauranteRepository;
@@ -9,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
 
 @Slf4j
@@ -32,33 +34,45 @@ public class RestauranteJpaGateway implements RestauranteGateway {
 	}
 
 	@Override
-	public Optional<Restaurante> buscarRestaurantePorNome(String nome) {
-		try {
-			return restauranteRepository.findByNome(nome).map(this::mapToDomain);
+	public Optional<Restaurante> atualizarRestaurante(Long id, Restaurante restaurante) {
+			return Optional.ofNullable(restauranteRepository.findById(id)
+                    .map(restauranteEntity -> {
+                        restauranteEntity.setNome(restaurante.getNome());
+                        restauranteEntity.setQuantidadeLugares(restaurante.getQuantidadeLugares());
+                        restauranteEntity.setLocalizacao(restaurante.getLocalizacao());
+                        restauranteEntity.setTipoCozinha(restaurante.getTipoCozinha());
+                        restauranteEntity.setHorarioFuncionamento(restaurante.getHorarioFuncionamento());
 
-		} catch (Exception e) {
+                        return mapToDomain(restauranteRepository.save(restauranteEntity));
+                    })
+                    .orElseThrow(RestauranteNaoEncontradoException::new));
+	}
+
+	@Override
+	public void removerRestaurante(Long id) {
+		try {
+			restauranteRepository.deleteById(id);
+		}catch (Exception e){
 			throw new ErroAcessarRepositorioException();
 		}
+	}
+
+	@Override
+	public Optional<Restaurante> buscarRestaurantePorNome(String nome) {
+		return Optional.ofNullable(restauranteRepository.findByNome(nome).map(this::mapToDomain)
+                .orElseThrow(RestauranteNaoEncontradoException::new));
 	}
 
 	@Override
 	public Optional<Restaurante> buscarRestaurantePorLocalizacao(String localizacao) {
-		try {
-			return restauranteRepository.findByLocalizacao(localizacao).map(this::mapToDomain);
-
-		} catch (Exception e) {
-			throw new ErroAcessarRepositorioException();
-		}
+		return Optional.ofNullable(restauranteRepository.findByLocalizacao(localizacao).map(this::mapToDomain)
+				.orElseThrow(RestauranteNaoEncontradoException::new));
 	}
 
 	@Override
 	public Optional<Restaurante> buscarRestaurantePorTipoCozinha(String tipoCozinha) {
-		try {
-			return restauranteRepository.findByTipoCozinha(tipoCozinha).map(this::mapToDomain);
-
-		} catch (Exception e) {
-			throw new ErroAcessarRepositorioException();
-		}
+		return Optional.ofNullable(restauranteRepository.findByTipoCozinha(tipoCozinha).map(this::mapToDomain)
+				.orElseThrow(RestauranteNaoEncontradoException::new));
 	}
 	
 	private Restaurante mapToDomain(RestauranteEntity restauranteEntity) {

@@ -30,4 +30,12 @@ public class GerenciarRestauranteUsecase {
     public Optional<Restaurante> buscarRestaurantePorLocalizacao(String localizacao) {
         return restauranteGateway.buscarRestaurantePorLocalizacao(localizacao);
     }
+
+    public Optional<Restaurante> atualizarRestaurante(Long id, Restaurante restaurante){
+        return restauranteGateway.atualizarRestaurante(id, restaurante);
+    }
+
+    public void removerRestaurante(Long id){
+        restauranteGateway.removerRestaurante(id);
+    }
 }

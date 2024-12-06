@@ -10,5 +10,6 @@ public interface RestauranteGateway {
 	Optional<Restaurante> buscarRestaurantePorTipoCozinha(String tipoCozinha);
 	Optional<Restaurante> buscarRestaurantePorLocalizacao(String localizacao);
 	void cadastrarRestaurante(Restaurante restaurante);
-
+	Optional<Restaurante> atualizarRestaurante(Long id, Restaurante restaurante);
+	void removerRestaurante(Long id);
 }
