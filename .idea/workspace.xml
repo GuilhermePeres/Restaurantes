@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Adicionando a exclusão e atualização de restaurantes">
+    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Ajustando para retornar mais de um restaurante">
+      <change afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/CucumberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/RestauranteGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/RestauranteGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/database/jpa/repository/RestauranteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/database/jpa/repository/RestauranteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecase.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +58,9 @@
     "Docker.cadastro.postgres: Compose Deployment.executor": "Run",
     "Docker.cadastro: Compose Deployment.executor": "Run",
     "Docker.cadastroRestaurante: Compose Deployment.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.testeBuscarRestaurantePorNome_RestauranteEncontrado.executor": "Debug",
+    "JUnit.GerenciarRestauranteUsecaseTest.testeCadastrarRestaurante.executor": "Debug",
     "Maven.Restaurantes [clean].executor": "Run",
     "Maven.Restaurantes [install].executor": "Run",
     "Maven.Restaurantes [package].executor": "Run",
@@ -76,11 +78,12 @@
       <recent name="C:\Users\guilh\OneDrive\Área de Trabalho\Minha pasta\Faculdade\Pós FIAP\Fases\workspace_all\intellij\workspaces\TechChallenge\Restaurantes" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.restaurantes.cadastro.bdd" />
       <recent name="br.com.restaurantes.cadastro.infraestrutura" />
       <recent name="br.com.restaurantes.cadastro.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RestauranteServiceApplication">
+  <component name="RunManager" selected="JUnit.GerenciarRestauranteUsecaseTest.testeBuscarRestaurantePorNome_RestauranteEncontrado">
     <configuration name="RestauranteServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -92,6 +95,53 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GerenciarRestauranteUsecaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Restaurantes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.restaurantes.cadastro.usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.restaurantes.cadastro.usecase" />
+      <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.usecase.GerenciarRestauranteUsecaseTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GerenciarRestauranteUsecaseTest.testeBuscarRestaurantePorNome_RestauranteEncontrado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Restaurantes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.restaurantes.cadastro.usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.restaurantes.cadastro.usecase" />
+      <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.usecase.GerenciarRestauranteUsecaseTest" />
+      <option name="METHOD_NAME" value="testeBuscarRestaurantePorNome_RestauranteEncontrado" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GerenciarRestauranteUsecaseTest.testeCadastrarRestaurante" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Restaurantes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.restaurantes.cadastro.usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.restaurantes.cadastro.usecase" />
+      <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.usecase.GerenciarRestauranteUsecaseTest" />
+      <option name="METHOD_NAME" value="testeCadastrarRestaurante" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,9 +178,15 @@
       <item itemvalue="Application.RestauranteServiceApplication" />
       <item itemvalue="Docker.Docker" />
       <item itemvalue="Docker.cadastro.postgres: Compose Deployment" />
+      <item itemvalue="JUnit.GerenciarRestauranteUsecaseTest" />
+      <item itemvalue="JUnit.GerenciarRestauranteUsecaseTest.testeBuscarRestaurantePorNome_RestauranteEncontrado" />
+      <item itemvalue="JUnit.GerenciarRestauranteUsecaseTest.testeCadastrarRestaurante" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GerenciarRestauranteUsecaseTest.testeBuscarRestaurantePorNome_RestauranteEncontrado" />
+        <item itemvalue="JUnit.GerenciarRestauranteUsecaseTest.testeCadastrarRestaurante" />
+        <item itemvalue="JUnit.GerenciarRestauranteUsecaseTest" />
         <item itemvalue="Application.RestauranteServiceApplication" />
         <item itemvalue="Docker.cadastro.postgres: Compose Deployment" />
       </list>
@@ -209,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733449796727</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Ajustando para retornar mais de um restaurante">
+      <option name="closed" value="true" />
+      <created>1733525533794</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733525533794</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -218,7 +282,8 @@
     <MESSAGE value="Corrigindo o serviço para cadastrar e buscar restaurantes" />
     <MESSAGE value="Commit inicial de testes unitários" />
     <MESSAGE value="Adicionando a exclusão e atualização de restaurantes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando a exclusão e atualização de restaurantes" />
+    <MESSAGE value="Ajustando para retornar mais de um restaurante" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustando para retornar mais de um restaurante" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -275,6 +340,16 @@
           <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGateway.java</url>
           <line>62</line>
           <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecaseTest.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecaseTest.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/RestauranteGateway.java</url>
