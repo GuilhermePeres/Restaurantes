@@ -38,7 +38,7 @@ public class RestauranteControllerTest {
                 null,
                 "Restaurante do Jonas",
                 100,
-                "Rua Alvez",
+                "Rua Alves",
         "Italiana",
         "10:00 às 22:00"
         );
@@ -47,14 +47,14 @@ public class RestauranteControllerTest {
                 null,
                 "Restaurante do Jonas",
                 100,
-                "Rua Alvez",
+                "Rua Alves",
                 "Italiana",
                 "10:00 às 22:00"
         );
 
         ResponseEntity<String> responseEntity = ResponseEntity.ok("Restaurante cadastrado com sucesso!");
 
-        verify(gerenciarRestauranteUsecase, times(1)).cadastrar(restaurante);
+        verify(gerenciarRestauranteUsecase, times(1)).cadastrarRestaurante(restaurante);
 
         mockMvc.perform(post("api/v1/restaurantes")
                 .contentType(MediaType.APPLICATION_JSON)

@@ -2,6 +2,7 @@ package br.com.restaurantes.cadastro.gateway.database.jpa;
 
 import br.com.restaurantes.cadastro.domain.Restaurante;
 import br.com.restaurantes.cadastro.exception.ErroAcessarRepositorioException;
+import br.com.restaurantes.cadastro.exception.IllegalArgumentException;
 import br.com.restaurantes.cadastro.exception.RestauranteNaoEncontradoException;
 import br.com.restaurantes.cadastro.gateway.RestauranteGateway;
 import br.com.restaurantes.cadastro.gateway.database.jpa.entity.RestauranteEntity;
@@ -10,6 +11,12 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import javax.swing.text.DateFormatter;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -89,6 +96,34 @@ public class RestauranteJpaGateway implements RestauranteGateway {
 		}
 
 		return restaurantes.stream().map(this::mapToDomain).collect(Collectors.toList());
+	}
+
+	@Override
+	public int verificarDisponibilidadeLugares(Long restauranteId, String dataReserva) {
+		Optional<RestauranteEntity> restauranteEntity = restauranteRepository.findById(restauranteId);
+
+		if(restauranteEntity.isEmpty()){
+			throw new RestauranteNaoEncontradoException();
+		}
+
+		int lugaresDisponiveis = restauranteEntity.get().getQuantidadeLugares();
+
+		try{
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+			LocalDateTime dateTime = LocalDateTime.parse(dataReserva, formatter);
+
+			LocalDateTime inicioNoite = LocalDateTime.of(dateTime.toLocalDate(), LocalTime.of(18, 0));
+			boolean noite = dateTime.isAfter(inicioNoite);
+
+			if(noite){
+				return lugaresDisponiveis;
+			}
+
+		}catch (DateTimeParseException e){
+			throw new IllegalArgumentException("Campo dataReserva inválido: " + dataReserva);
+		}
+
+		return lugaresDisponiveis / 2;
 	}
 	
 	private Restaurante mapToDomain(RestauranteEntity restauranteEntity) {

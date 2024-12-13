@@ -1,153 +1,150 @@
 package br.com.restaurantes.cadastro.usecase;
 
 import br.com.restaurantes.cadastro.domain.Restaurante;
-import br.com.restaurantes.cadastro.gateway.RestauranteGateway;
-import org.junit.jupiter.api.BeforeEach;
+import br.com.restaurantes.cadastro.gateway.database.jpa.entity.RestauranteEntity;
+import br.com.restaurantes.cadastro.gateway.database.jpa.repository.RestauranteRepository;
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.jdbc.Sql;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class GerenciarRestauranteUsecaseTest {
-    @InjectMocks
+@SpringBootTest
+@AutoConfigureTestDatabase
+@Transactional
+class GerenciarRestauranteUsecaseIT {
+
+    @Autowired
     private GerenciarRestauranteUsecase gerenciarRestauranteUsecase;
 
-    @Mock
-    private RestauranteGateway restauranteGateway;
-
-    @BeforeEach
-    void setup() { MockitoAnnotations.openMocks(this); }
+    @Autowired
+    private RestauranteRepository restauranteRepository;
 
     @Test
+    @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
     public void deveCadastrarRestaurante() {
         Restaurante restaurante = new Restaurante(
-                null,
-                "Restaurante do Jonas",
-                100,
-                "Rua Alves",
-                "Italiana",
-                "10:00 às 22:00"
+                1L,
+                "Restaurante da Ana",
+                20,
+                "Rua Palmeiras",
+                "Japonesa",
+                "06:00 às 21:00"
         );
 
         gerenciarRestauranteUsecase.cadastrarRestaurante(restaurante);
 
-        Mockito.verify(restauranteGateway, Mockito.times(1)).cadastrarRestaurante(restaurante);
+        List<RestauranteEntity> restaurantesCadastrados = restauranteRepository.findByNome("Restaurante da Ana");
+        assertFalse(restaurantesCadastrados.isEmpty(), "Deveria encontrar o restaurante");
     }
 
     @Test
+    @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
     public void deveBuscarRestaurantePorNome() {
-        String nome = "Restaurante do Jonas";
+        String nome = "Tio Zeca Lanches";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
                 1L,
-                "Restaurante do Jonas",
-                100,
-                "Rua Alves",
-                "Italiana",
-                "10:00 às 22:00"
+                "Tio Zeca Lanches",
+                50,
+                "Rua Almirante",
+                "Restaurante Chinês",
+                "24h"
         ));
-
-        Mockito.when(restauranteGateway.buscarRestaurantePorNome(nome)).thenReturn(restaurantesEsperados);
-
         List<Restaurante> restaurantesRetornados = gerenciarRestauranteUsecase.buscarRestaurantePorNome(nome);
 
+        assertNotNull(restaurantesRetornados);
+        assertFalse(restaurantesRetornados.isEmpty());
         assertEquals(restaurantesEsperados.get(0).getId(), restaurantesRetornados.get(0).getId());
         assertEquals(restaurantesEsperados.get(0).getNome(), restaurantesRetornados.get(0).getNome());
         assertEquals(restaurantesEsperados.get(0).getQuantidadeLugares(), restaurantesRetornados.get(0).getQuantidadeLugares());
         assertEquals(restaurantesEsperados.get(0).getLocalizacao(), restaurantesRetornados.get(0).getLocalizacao());
         assertEquals(restaurantesEsperados.get(0).getTipoCozinha(), restaurantesRetornados.get(0).getTipoCozinha());
         assertEquals(restaurantesEsperados.get(0).getHorarioFuncionamento(), restaurantesRetornados.get(0).getHorarioFuncionamento());
-        Mockito.verify(restauranteGateway, Mockito.times(1)).buscarRestaurantePorNome(nome);
     }
 
     @Test
+    @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
     public void deveBuscarRestaurantePorTipoCozinha() {
-        String tipoCozinha = "Italiana";
+        String tipoCozinha = "Restaurante Chinês";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
                 1L,
-                "Restaurante do Jonas",
-                100,
-                "Rua Alves",
-                "Italiana",
-                "10:00 às 22:00"
+                "Tio Zeca Lanches",
+                50,
+                "Rua Almirante",
+                "Restaurante Chinês",
+                "24h"
         ));
-
-        Mockito.when(restauranteGateway.buscarRestaurantePorTipoCozinha(tipoCozinha)).thenReturn(restaurantesEsperados);
-
         List<Restaurante> restaurantesRetornados = gerenciarRestauranteUsecase.buscarRestaurantePorTipoCozinha(tipoCozinha);
 
+        assertNotNull(restaurantesRetornados);
+        assertFalse(restaurantesRetornados.isEmpty());
         assertEquals(restaurantesEsperados.get(0).getId(), restaurantesRetornados.get(0).getId());
         assertEquals(restaurantesEsperados.get(0).getNome(), restaurantesRetornados.get(0).getNome());
         assertEquals(restaurantesEsperados.get(0).getQuantidadeLugares(), restaurantesRetornados.get(0).getQuantidadeLugares());
         assertEquals(restaurantesEsperados.get(0).getLocalizacao(), restaurantesRetornados.get(0).getLocalizacao());
         assertEquals(restaurantesEsperados.get(0).getTipoCozinha(), restaurantesRetornados.get(0).getTipoCozinha());
         assertEquals(restaurantesEsperados.get(0).getHorarioFuncionamento(), restaurantesRetornados.get(0).getHorarioFuncionamento());
-        Mockito.verify(restauranteGateway, Mockito.times(1)).buscarRestaurantePorTipoCozinha(tipoCozinha);
     }
 
     @Test
+    @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
     public void deveBuscarRestaurantePorLocalizacao() {
-        String localizacao = "Rua Alves";
+        String localizacao = "Rua Almirante";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
                 1L,
-                "Restaurante do Jonas",
-                100,
-                "Rua Alves",
-                "Italiana",
-                "10:00 às 22:00"
+                "Tio Zeca Lanches",
+                50,
+                "Rua Almirante",
+                "Restaurante Chinês",
+                "24h"
         ));
-
-        Mockito.when(restauranteGateway.buscarRestaurantePorLocalizacao(localizacao)).thenReturn(restaurantesEsperados);
-
         List<Restaurante> restaurantesRetornados = gerenciarRestauranteUsecase.buscarRestaurantePorLocalizacao(localizacao);
 
+        assertNotNull(restaurantesRetornados);
+        assertFalse(restaurantesRetornados.isEmpty());
         assertEquals(restaurantesEsperados.get(0).getId(), restaurantesRetornados.get(0).getId());
         assertEquals(restaurantesEsperados.get(0).getNome(), restaurantesRetornados.get(0).getNome());
         assertEquals(restaurantesEsperados.get(0).getQuantidadeLugares(), restaurantesRetornados.get(0).getQuantidadeLugares());
         assertEquals(restaurantesEsperados.get(0).getLocalizacao(), restaurantesRetornados.get(0).getLocalizacao());
         assertEquals(restaurantesEsperados.get(0).getTipoCozinha(), restaurantesRetornados.get(0).getTipoCozinha());
         assertEquals(restaurantesEsperados.get(0).getHorarioFuncionamento(), restaurantesRetornados.get(0).getHorarioFuncionamento());
-        Mockito.verify(restauranteGateway, Mockito.times(1)).buscarRestaurantePorLocalizacao(localizacao);
     }
 
     @Test
-    public void deveVerificarDisponibilidadeDeLugaresDoRestaurante(){
+    @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
+    public void deveVerificarDisponibilidadeLugaresDoRestaurante() {
         Long id = 1L;
         String dataReserva = "2024-12-11 19:00";
         int lugaresDisponiveisEsperados = 50;
 
-        Mockito.when(restauranteGateway.verificarDisponibilidadeLugares(id, dataReserva)).thenReturn(lugaresDisponiveisEsperados);
-
         int lugaresDisponiveis = gerenciarRestauranteUsecase.verificarDisponibilidadeLugares(id, dataReserva);
 
         assertEquals(lugaresDisponiveisEsperados, lugaresDisponiveis);
-        Mockito.verify(restauranteGateway, Mockito.times(1)).verificarDisponibilidadeLugares(id, dataReserva);
     }
 
     @Test
+    @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
     public void deveAtualizarRestaurante() {
         Long id = 1L;
 
         Restaurante restauranteAtualizado = new Restaurante(
                 id,
-                "Restaurante do Jonas 2",
-                122,
-                "Rua Alves 2",
-                "Italiana 2",
-                "06:00 às 20:00"
+                "Tio Zeca Lanches 2",
+                50,
+                "Rua Almirante 2",
+                "Restaurante Chinês 2",
+                "06:00 às 21:00"
         );
-
-        Mockito.when(restauranteGateway.atualizarRestaurante(id, restauranteAtualizado)).thenReturn(Optional.of(restauranteAtualizado));
 
         Optional<Restaurante> restauranteRetornado = gerenciarRestauranteUsecase.atualizarRestaurante(id, restauranteAtualizado);
 
@@ -158,15 +155,17 @@ public class GerenciarRestauranteUsecaseTest {
         assertEquals(restauranteAtualizado.getLocalizacao(), restauranteRetornado.get().getLocalizacao());
         assertEquals(restauranteAtualizado.getTipoCozinha(), restauranteRetornado.get().getTipoCozinha());
         assertEquals(restauranteAtualizado.getHorarioFuncionamento(), restauranteRetornado.get().getHorarioFuncionamento());
-        Mockito.verify(restauranteGateway, Mockito.times(1)).atualizarRestaurante(id, restauranteAtualizado);
     }
 
     @Test
+    @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
     public void deveRemoverRestaurante() {
         Long id = 1L;
 
         gerenciarRestauranteUsecase.removerRestaurante(id);
 
-        Mockito.verify(restauranteGateway, Mockito.times(1)).removerRestaurante(id);
+        Optional<RestauranteEntity> restauranteRetornado = restauranteRepository.findById(id);
+
+        assertFalse(restauranteRetornado.isPresent(), "Não deveria encontrar o restaurante");
     }
 }

@@ -30,7 +30,7 @@ public class DefinicaoPassos {
                 null,
                 "Restaurante do Jonas",
                 100,
-                "Rua Alvez",
+                "Rua Alves",
                 "Italiana",
                 "10:00 às 22:00"
         );
@@ -46,5 +46,65 @@ public class DefinicaoPassos {
         System.out.println();
     }
 
-
+//    @Quando("requisitar atualização da reserva")
+//    public void requisitarAtualizacaoDaReserva() {
+//        AtualizarReservaJson atualizarReservaJson = new AtualizarReservaJson(reserva.id(),
+//                1L, 10,
+//                "João Silva", LocalDateTime.parse("2024-11-20T15:30:00"),
+//                Reserva.Status.INICIADA);
+//
+//        response = given().contentType(MediaType.APPLICATION_JSON_VALUE).body(atualizarReservaJson).when().put(endpoint);
+//    }
+//
+//    @Então("a reserva é atualizada com sucesso")
+//    public void atualizarReserva() {
+//        response.then().statusCode(HttpStatus.OK.value()).body("$", hasKey("reserva"));
+//    }
+//
+//    @Dado("que mais de uma reserva exista")
+//    public void criarMultiplasReservas() {
+//        criarNovaReserva();
+//        criarNovaReserva();
+//        criarNovaReserva();
+//    }
+//
+//    @Quando("listar as reservas")
+//    public void listarReservas() {
+//        response = given().contentType(MediaType.APPLICATION_JSON_VALUE).when().get(endpoint + "?restauranteId=2&dataReserva=2024-12-01T18:00:00");
+//    }
+//
+//    @Então("as reservas são listadas")
+//    public void conferirListaDeReservas() {
+//        ListarReservasResponseJson reservas = response.then().extract().as(ListarReservasResponseJson.class);
+//
+//        assertFalse(reservas.reservas().isEmpty());
+//        assertTrue(reservas.reservas().size() > 1);
+//    }
+//
+//    @Dado("que uma reserva esteja iniciada")
+//    public void iniciarReservaPendente() {
+//        criarNovaReserva();
+//        requisitarAtualizacaoDaReserva();
+//    }
+//
+//    @Quando("avaliar a reserva")
+//    public void avaliarReserva() {
+//        CriarAvaliacaoJson criarAvaliacaoJson = new CriarAvaliacaoJson(
+//                reserva.id(),
+//                Avaliacao.Satisfacao.PERFEITO,
+//                "Comentario Teste");
+//
+//        response = given()
+//                .contentType(MediaType.APPLICATION_JSON_VALUE)
+//                .body(criarAvaliacaoJson)
+//                .when()
+//                .post(endpoint + "/avaliar");
+//    }
+//
+//    @Então("a reserva é avaliada com sucesso")
+//    public void conferirAvaliacao() {
+//        response.then()
+//                .statusCode(HttpStatus.CREATED.value())
+//                .body("$", hasKey("id"));
+//    }
 }

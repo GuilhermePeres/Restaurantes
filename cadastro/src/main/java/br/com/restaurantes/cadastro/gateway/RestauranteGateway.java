@@ -13,4 +13,5 @@ public interface RestauranteGateway {
 	void cadastrarRestaurante(Restaurante restaurante);
 	Optional<Restaurante> atualizarRestaurante(Long id, Restaurante restaurante);
 	void removerRestaurante(Long id);
+	int verificarDisponibilidadeLugares(Long restauranteId, String dataReserva);
 }

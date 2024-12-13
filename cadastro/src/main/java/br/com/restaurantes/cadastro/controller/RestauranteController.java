@@ -31,7 +31,7 @@ public class RestauranteController {
 	
 	@PostMapping
 	public ResponseEntity<?> cadastrar(@Valid @RequestBody RestauranteJson restauranteJson) {
-		gerenciarRestauranteUsecase.cadastrar(mapToDomain(restauranteJson));
+		gerenciarRestauranteUsecase.cadastrarRestaurante(mapToDomain(restauranteJson));
 
 		return ResponseEntity.ok("Restaurante cadastrado com sucesso!");
 	}
@@ -61,6 +61,15 @@ public class RestauranteController {
 		List<RestauranteJson> restauranteJsons = restaurantes.stream().map(this::mapToJson).collect(Collectors.toList());
 
 		return ResponseEntity.ok(restauranteJsons);
+	}
+	///api/v1/restaurantes/disponibilidade?restauranteId=%s&dataReserva=%s
+	@GetMapping("disponibilidade")
+	public ResponseEntity<?> verificarDisponibilidadeLugares(
+			@RequestParam Long restauranteId,
+			@RequestParam String dataReserva){ //verificar se é valido
+		int lugaresDisponiveis = gerenciarRestauranteUsecase.verificarDisponibilidadeLugares(restauranteId, dataReserva);
+
+		return ResponseEntity.ok(lugaresDisponiveis);
 	}
 
 	@PutMapping("/{id}")

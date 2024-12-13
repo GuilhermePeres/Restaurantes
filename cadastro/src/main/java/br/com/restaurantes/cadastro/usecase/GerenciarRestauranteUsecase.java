@@ -16,7 +16,7 @@ public class GerenciarRestauranteUsecase {
 
 	private final RestauranteGateway restauranteGateway;
 
-	public void cadastrar(Restaurante restaurante) {
+	public void cadastrarRestaurante(Restaurante restaurante) {
         restauranteGateway.cadastrarRestaurante(restaurante);
     }
 
@@ -30,6 +30,10 @@ public class GerenciarRestauranteUsecase {
 
     public List<Restaurante> buscarRestaurantePorLocalizacao(String localizacao) {
         return restauranteGateway.buscarRestaurantePorLocalizacao(localizacao);
+    }
+
+    public int verificarDisponibilidadeLugares(Long restauranteId, String dataReserva) {
+        return restauranteGateway.verificarDisponibilidadeLugares(restauranteId, dataReserva);
     }
 
     public Optional<Restaurante> atualizarRestaurante(Long id, Restaurante restaurante){
