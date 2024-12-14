@@ -124,7 +124,7 @@ class GerenciarRestauranteUsecaseIT {
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
     public void deveVerificarDisponibilidadeLugaresDoRestaurante() {
         Long id = 1L;
-        String dataReserva = "2024-12-11 19:00";
+        String dataReserva = "2024-12-11T19:00";
         int lugaresDisponiveisEsperados = 50;
 
         int lugaresDisponiveis = gerenciarRestauranteUsecase.verificarDisponibilidadeLugares(id, dataReserva);

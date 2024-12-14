@@ -166,7 +166,7 @@ public class RestauranteJpaGatewayTest {
     @Test
     public void deveVerificarDisponibilidadeDeLugaresDoRestauranteDeNoite(){
         Long id = 1L;
-        String dataReserva = "2024-12-11 19:00";
+        String dataReserva = "2024-12-11T19:00";
         int lugaresDisponiveisEsperados = 100;
 
         Optional<RestauranteEntity> restaurantesEsperados = Optional.of(new RestauranteEntity(
@@ -189,7 +189,7 @@ public class RestauranteJpaGatewayTest {
     @Test
     public void deveVerificarDisponibilidadeDeLugaresDoRestauranteDeDia(){
         Long id = 1L;
-        String dataReserva = "2024-12-11 15:00";
+        String dataReserva = "2024-12-11T15:00";
         int lugaresDisponiveisEsperados = 50;
 
         Optional<RestauranteEntity> restaurantesEsperados = Optional.of(new RestauranteEntity(

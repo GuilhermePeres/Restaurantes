@@ -109,7 +109,7 @@ public class RestauranteJpaGateway implements RestauranteGateway {
 		int lugaresDisponiveis = restauranteEntity.get().getQuantidadeLugares();
 
 		try{
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
 			LocalDateTime dateTime = LocalDateTime.parse(dataReserva, formatter);
 
 			LocalDateTime inicioNoite = LocalDateTime.of(dateTime.toLocalDate(), LocalTime.of(18, 0));

@@ -4,24 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Iniciando os testes unitários e com cucumber">
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/exception/IllegalArgumentException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGatewayIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGatewayTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecaseIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/test/resources/clean.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/test/resources/restaurante.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Restaurantes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Restaurantes.iml" afterDir="false" />
+    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Continuação dos testes unitários e integrados. Adição da verificação de disponibilidade">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/exception/ErroAcessarRepositorioException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/exception/ErroAcessarRepositorioException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/RestauranteGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/RestauranteGateway.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/infraestrutura/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/infraestrutura/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecase.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGatewayIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGatewayIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGatewayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGatewayTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecaseIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecaseIT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,74 +52,74 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.RestauranteServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Docker.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.cadastro.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.cadastro: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.cadastroRestaurante: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.buscarRestaurantePorLocalizacao.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.buscarRestaurantePorTipoCozinha.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.deveAtualizarRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.deveBuscarRestaurantePorNome.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.deveCadastrarRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.deveRemoverRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.deveVerificarDisponibilidadeLugaresDoRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.deveVerificarDisponibilidadeLugaresdoRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.deveAtualizarRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.deveBuscarRestaurantePorLocalizacao.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.deveBuscarRestaurantePorNome.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.deveBuscarRestaurantePorTipoCozinha.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.deveCadastrarRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.deveRemoverRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.testeBuscarRestaurantePorNome_RestauranteEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.testeCadastrarRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveAtualizarRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorLocalizacao.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorLocalizacao_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorNome.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorNome_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorTipoCozinha.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorTipoCozinha_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveCadastrarRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveRemoverRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveAtualizarRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorLocalizacao.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorLocalizacao_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorNome.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorNome_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorTipoCozinha.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorTipoCozinha_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveCadastrarRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveRemoverRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestauranteDeDia.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestauranteDeNoite.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Restaurantes [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Restaurantes [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Restaurantes [package].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/guilh/OneDrive/Área de Trabalho/Minha pasta/Faculdade/Pós FIAP/Fases/workspace_all/intellij/workspaces/Projects/estudosTestesAplicacao&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.RestauranteServiceApplication.executor": "Run",
+    "Docker.Docker.executor": "Run",
+    "Docker.cadastro.postgres: Compose Deployment.executor": "Run",
+    "Docker.cadastro: Compose Deployment.executor": "Run",
+    "Docker.cadastroRestaurante: Compose Deployment.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseIT.buscarRestaurantePorLocalizacao.executor": "Debug",
+    "JUnit.GerenciarRestauranteUsecaseIT.buscarRestaurantePorTipoCozinha.executor": "Debug",
+    "JUnit.GerenciarRestauranteUsecaseIT.deveAtualizarRestaurante.executor": "Debug",
+    "JUnit.GerenciarRestauranteUsecaseIT.deveBuscarRestaurantePorNome.executor": "Debug",
+    "JUnit.GerenciarRestauranteUsecaseIT.deveCadastrarRestaurante.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseIT.deveRemoverRestaurante.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseIT.deveVerificarDisponibilidadeLugaresDoRestaurante.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseIT.deveVerificarDisponibilidadeLugaresdoRestaurante.executor": "Debug",
+    "JUnit.GerenciarRestauranteUsecaseIT.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.deveAtualizarRestaurante.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.deveBuscarRestaurantePorLocalizacao.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.deveBuscarRestaurantePorNome.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.deveBuscarRestaurantePorTipoCozinha.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.deveCadastrarRestaurante.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.deveRemoverRestaurante.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.testeBuscarRestaurantePorNome_RestauranteEncontrado.executor": "Debug",
+    "JUnit.GerenciarRestauranteUsecaseTest.testeCadastrarRestaurante.executor": "Run",
+    "JUnit.RestauranteJpaGatewayIT.deveAtualizarRestaurante.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorLocalizacao.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorLocalizacao_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorNome.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorNome_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorTipoCozinha.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorTipoCozinha_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveCadastrarRestaurante.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveRemoverRestaurante.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia.executor": "Run",
+    "JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Run",
+    "JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.executor": "Run",
+    "JUnit.RestauranteJpaGatewayTest.deveAtualizarRestaurante.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorLocalizacao.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorLocalizacao_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorNome.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorNome_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorTipoCozinha.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorTipoCozinha_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveCadastrarRestaurante.executor": "Run",
+    "JUnit.RestauranteJpaGatewayTest.deveRemoverRestaurante.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestauranteDeDia.executor": "Run",
+    "JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestauranteDeNoite.executor": "Run",
+    "JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Run",
+    "JUnit.RestauranteJpaGatewayTest.executor": "Run",
+    "Maven.Restaurantes [clean].executor": "Run",
+    "Maven.Restaurantes [install].executor": "Run",
+    "Maven.Restaurantes [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/guilh/OneDrive/Área de Trabalho/Minha pasta/Faculdade/Pós FIAP/Fases/workspace_all/intellij/workspaces/TechChallenge/Restaurantes",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\guilh\OneDrive\Área de Trabalho\Minha pasta\Faculdade\Pós FIAP\Fases\workspace_all\intellij\workspaces\TechChallenge\Restaurantes\cadastroRestaurante" />
@@ -174,7 +162,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestauranteJpaGatewayIT.deveAtualizarRestaurante" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Restaurantes" />
       <extension name="coverage">
         <pattern>
@@ -184,13 +172,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa" />
       <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa.RestauranteJpaGatewayIT" />
-      <option name="METHOD_NAME" value="deveAtualizarRestaurante" />
+      <option name="METHOD_NAME" value="deveVerificarDisponibilidadeLugaresDoRestauranteDeDia" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestauranteJpaGatewayIT.deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Restaurantes" />
       <extension name="coverage">
         <pattern>
@@ -200,13 +188,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa" />
       <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa.RestauranteJpaGatewayIT" />
-      <option name="METHOD_NAME" value="deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado" />
+      <option name="METHOD_NAME" value="deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestauranteJpaGatewayIT.deveRemoverRestaurante" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Restaurantes" />
       <extension name="coverage">
         <pattern>
@@ -216,13 +204,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa" />
       <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa.RestauranteJpaGatewayIT" />
-      <option name="METHOD_NAME" value="deveRemoverRestaurante" />
+      <option name="METHOD_NAME" value="deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RestauranteJpaGatewayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Restaurantes" />
       <extension name="coverage">
         <pattern>
@@ -231,9 +219,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa" />
-      <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa.RestauranteJpaGatewayIT" />
-      <option name="METHOD_NAME" value="deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa.RestauranteJpaGatewayTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -256,19 +243,19 @@
     <list>
       <item itemvalue="Application.RestauranteServiceApplication" />
       <item itemvalue="Docker.Docker" />
+      <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia" />
+      <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado" />
+      <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite" />
+      <item itemvalue="JUnit.RestauranteJpaGatewayTest" />
       <item itemvalue="JUnit.RestauranteJpaGatewayIT" />
-      <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveAtualizarRestaurante" />
-      <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado" />
-      <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveRemoverRestaurante" />
-      <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.RestauranteJpaGatewayIT" />
-        <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveRemoverRestaurante" />
-        <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado" />
-        <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveAtualizarRestaurante" />
-        <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado" />
+        <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite" />
+        <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado" />
+        <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia" />
+        <item itemvalue="JUnit.RestauranteJpaGatewayTest" />
       </list>
     </recent_temporary>
   </component>
@@ -361,7 +348,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733530331479</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Continuação dos testes unitários e integrados. Adição da verificação de disponibilidade">
+      <option name="closed" value="true" />
+      <created>1734126862522</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734126862522</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -373,7 +368,8 @@
     <MESSAGE value="Ajustando para retornar mais de um restaurante" />
     <MESSAGE value="Ininicando os testes unitários e com cucumber" />
     <MESSAGE value="Iniciando os testes unitários e com cucumber" />
-    <option name="LAST_COMMIT_MESSAGE" value="Iniciando os testes unitários e com cucumber" />
+    <MESSAGE value="Continuação dos testes unitários e integrados. Adição da verificação de disponibilidade" />
+    <option name="LAST_COMMIT_MESSAGE" value="Continuação dos testes unitários e integrados. Adição da verificação de disponibilidade" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

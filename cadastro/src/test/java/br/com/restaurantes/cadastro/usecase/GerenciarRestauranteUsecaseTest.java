@@ -123,7 +123,7 @@ public class GerenciarRestauranteUsecaseTest {
     @Test
     public void deveVerificarDisponibilidadeDeLugaresDoRestaurante(){
         Long id = 1L;
-        String dataReserva = "2024-12-11 19:00";
+        String dataReserva = "2024-12-11T19:00";
         int lugaresDisponiveisEsperados = 50;
 
         Mockito.when(restauranteGateway.verificarDisponibilidadeLugares(id, dataReserva)).thenReturn(lugaresDisponiveisEsperados);

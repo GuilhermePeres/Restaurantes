@@ -150,7 +150,7 @@ public class RestauranteJpaGatewayIT {
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
     public void deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite() {
         Long id = 1L;
-        String dataReserva = "2024-12-11 19:00";
+        String dataReserva = "2024-12-11T19:00";
         int lugaresDisponiveisEsperados = 50;
 
         int lugaresDisponiveis = restauranteJpaGateway.verificarDisponibilidadeLugares(id, dataReserva);
@@ -162,7 +162,7 @@ public class RestauranteJpaGatewayIT {
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
     public void deveVerificarDisponibilidadeLugaresDoRestauranteDeDia() {
         Long id = 1L;
-        String dataReserva = "2024-12-11 15:00";
+        String dataReserva = "2024-12-11T15:00";
         int lugaresDisponiveisEsperados = 25;
 
         int lugaresDisponiveis = restauranteJpaGateway.verificarDisponibilidadeLugares(id, dataReserva);
@@ -174,7 +174,7 @@ public class RestauranteJpaGatewayIT {
     @Sql(scripts = {"/clean.sql"})
     public void deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         Long id = 1L;
-        String dataReserva = "2024-12-11 19:00";
+        String dataReserva = "2024-12-11T19:00";
 
         assertThrows(RestauranteNaoEncontradoException.class, () -> {restauranteJpaGateway.verificarDisponibilidadeLugares(id, dataReserva);});
     }
