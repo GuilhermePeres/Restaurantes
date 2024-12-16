@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Finalização dos testes da aplicação.">
+    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Arrumando o pom.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/exception/ErroAcessarRepositorioException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/exception/ErroAcessarRepositorioException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,8 +292,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Feature: FuncionalidadeRestaurante" />
-        <item itemvalue="Cucumber Java.Scenario: Buscar restaurantes por tipoCozinha" />
         <item itemvalue="JUnit.CucumberTest" />
+        <item itemvalue="Cucumber Java.Scenario: Buscar restaurantes por tipoCozinha" />
         <item itemvalue="Cucumber Java.Scenario: Buscar restaurantes por nome" />
         <item itemvalue="Cucumber Java.Scenario: Remover um restaurante" />
       </list>
@@ -412,7 +412,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734317409153</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Arrumando o pom.">
+      <option name="closed" value="true" />
+      <created>1734387412422</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1734387412422</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -427,7 +435,8 @@
     <MESSAGE value="Continuação dos testes unitários e integrados. Adição da verificação de disponibilidade" />
     <MESSAGE value="Ajuste dos testes unitários e integrados." />
     <MESSAGE value="Finalização dos testes da aplicação." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalização dos testes da aplicação." />
+    <MESSAGE value="Arrumando o pom." />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrumando o pom." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
