@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Arrumando o pom.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/exception/ErroAcessarRepositorioException.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/exception/ErroAcessarRepositorioException.java" afterDir="false" />
-    </list>
+    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Ajuste de mensagem de retorno." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,7 +154,7 @@
       <recent name="br.com.restaurantes.cadastro.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: FuncionalidadeRestaurante">
+  <component name="RunManager" selected="JUnit.CucumberTest">
     <configuration name="RestauranteServiceApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.RestauranteServiceApplication" />
       <module name="Restaurantes" />
@@ -291,8 +288,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: FuncionalidadeRestaurante" />
         <item itemvalue="JUnit.CucumberTest" />
+        <item itemvalue="Cucumber Java.Feature: FuncionalidadeRestaurante" />
         <item itemvalue="Cucumber Java.Scenario: Buscar restaurantes por tipoCozinha" />
         <item itemvalue="Cucumber Java.Scenario: Buscar restaurantes por nome" />
         <item itemvalue="Cucumber Java.Scenario: Remover um restaurante" />
@@ -420,7 +417,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734387412422</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Ajuste de mensagem de retorno.">
+      <option name="closed" value="true" />
+      <created>1734388933325</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1734388933325</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -436,7 +441,8 @@
     <MESSAGE value="Ajuste dos testes unitários e integrados." />
     <MESSAGE value="Finalização dos testes da aplicação." />
     <MESSAGE value="Arrumando o pom." />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrumando o pom." />
+    <MESSAGE value="Ajuste de mensagem de retorno." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajuste de mensagem de retorno." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -743,32 +749,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>153</line>
+          <line>152</line>
           <option name="timeStamp" value="160" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>161</line>
+          <line>160</line>
           <option name="timeStamp" value="162" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>180</line>
+          <line>179</line>
           <option name="timeStamp" value="163" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>197</line>
+          <line>196</line>
           <option name="timeStamp" value="164" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>213</line>
+          <line>212</line>
           <option name="timeStamp" value="168" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>218</line>
+          <line>217</line>
           <option name="timeStamp" value="169" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

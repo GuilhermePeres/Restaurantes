@@ -136,7 +136,6 @@ public class DefinicaoPassos {
         for(Object restauranteObj : restaurantesRetornados){
             Restaurante restaurante = objectMapper.convertValue(restauranteObj, Restaurante.class);
             restaurantes.add(restaurante);
-            break;
         }
 
         restauranteJson = new RestauranteJson(
