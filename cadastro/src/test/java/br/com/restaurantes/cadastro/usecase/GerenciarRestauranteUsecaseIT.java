@@ -28,20 +28,20 @@ class GerenciarRestauranteUsecaseIT {
     private RestauranteRepository restauranteRepository;
 
     @Test
-    @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
+    @Sql(scripts = {"/clean.sql"})
     public void deveCadastrarRestaurante() {
         Restaurante restaurante = new Restaurante(
-                1L,
-                "Restaurante da Ana",
-                20,
-                "Rua Palmeiras",
-                "Japonesa",
-                "06:00 às 21:00"
+                null,
+                "Tio Zeca Lanches",
+                50,
+                "Rua Almirante",
+                "Restaurante Chinês",
+                "24h"
         );
 
         gerenciarRestauranteUsecase.cadastrarRestaurante(restaurante);
 
-        List<RestauranteEntity> restaurantesCadastrados = restauranteRepository.findByNome("Restaurante da Ana");
+        List<RestauranteEntity> restaurantesCadastrados = restauranteRepository.findByNome("Tio Zeca Lanches");
         assertFalse(restaurantesCadastrados.isEmpty(), "Deveria encontrar o restaurante");
     }
 

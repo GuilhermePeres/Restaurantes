@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Continuação dos testes unitários e integrados. Adição da verificação de disponibilidade">
+    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Ajuste dos testes unitários e integrados.">
+      <change afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/RestauranteResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/test/resources/features/FuncionalidadeRestaurante.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/domain/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/domain/Restaurante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGatewayIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGatewayIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGatewayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGatewayTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecaseIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecaseIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +60,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.RestauranteServiceApplication.executor": "Run",
+    "Cucumber Java.Feature: FuncionalidadeRestaurante.executor": "Run",
+    "Cucumber Java.Scenario: Atualizar um restaurante.executor": "Debug",
+    "Cucumber Java.Scenario: Buscar restaurantes por localizacao.executor": "Debug",
+    "Cucumber Java.Scenario: Buscar restaurantes por nome.executor": "Debug",
+    "Cucumber Java.Scenario: Buscar restaurantes por tipoCozinha.executor": "Debug",
+    "Cucumber Java.Scenario: Cadastrar um novo restaurante.executor": "Debug",
+    "Cucumber Java.Scenario: Remover um restaurante.executor": "Debug",
+    "Cucumber Java.Scenario: Verificar disponibilidade de lugares.executor": "Debug",
     "Docker.Docker.executor": "Run",
     "Docker.cadastro.postgres: Compose Deployment.executor": "Run",
     "Docker.cadastro: Compose Deployment.executor": "Run",
     "Docker.cadastroRestaurante: Compose Deployment.executor": "Run",
+    "JUnit.CucumberTest.executor": "Run",
     "JUnit.GerenciarRestauranteUsecaseIT.buscarRestaurantePorLocalizacao.executor": "Debug",
     "JUnit.GerenciarRestauranteUsecaseIT.buscarRestaurantePorTipoCozinha.executor": "Debug",
     "JUnit.GerenciarRestauranteUsecaseIT.deveAtualizarRestaurante.executor": "Debug",
@@ -78,6 +92,22 @@
     "JUnit.GerenciarRestauranteUsecaseTest.executor": "Run",
     "JUnit.GerenciarRestauranteUsecaseTest.testeBuscarRestaurantePorNome_RestauranteEncontrado.executor": "Debug",
     "JUnit.GerenciarRestauranteUsecaseTest.testeCadastrarRestaurante.executor": "Run",
+    "JUnit.RestauranteControllerIT.deveAtualizarRestaurante.executor": "Debug",
+    "JUnit.RestauranteControllerIT.deveBuscarRestaurantePorLocalizacao.executor": "Run",
+    "JUnit.RestauranteControllerIT.deveBuscarRestaurantePorNome.executor": "Debug",
+    "JUnit.RestauranteControllerIT.deveBuscarRestaurantePorTipoCozinha.executor": "Run",
+    "JUnit.RestauranteControllerIT.deveCadastrarRestaurante.executor": "Debug",
+    "JUnit.RestauranteControllerIT.deveRemoverRestaurante.executor": "Debug",
+    "JUnit.RestauranteControllerIT.deveVerificarDisponibilidadeLugaresDoRestaurante.executor": "Debug",
+    "JUnit.RestauranteControllerIT.executor": "Run",
+    "JUnit.RestauranteControllerTest.deveAtualizarRestaurante.executor": "Run",
+    "JUnit.RestauranteControllerTest.deveBuscarRestaurantePorLocalizacao.executor": "Debug",
+    "JUnit.RestauranteControllerTest.deveBuscarRestaurantePorNome.executor": "Debug",
+    "JUnit.RestauranteControllerTest.deveBuscarRestaurantePorTipoCozinha.executor": "Debug",
+    "JUnit.RestauranteControllerTest.deveCadastrarRestaurante.executor": "Run",
+    "JUnit.RestauranteControllerTest.deveRemoverRestaurante.executor": "Debug",
+    "JUnit.RestauranteControllerTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante.executor": "Debug",
+    "JUnit.RestauranteControllerTest.executor": "Run",
     "JUnit.RestauranteJpaGatewayIT.deveAtualizarRestaurante.executor": "Debug",
     "JUnit.RestauranteJpaGatewayIT.deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
     "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorLocalizacao.executor": "Debug",
@@ -86,12 +116,12 @@
     "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorNome_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
     "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorTipoCozinha.executor": "Debug",
     "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorTipoCozinha_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
-    "JUnit.RestauranteJpaGatewayIT.deveCadastrarRestaurante.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveCadastrarRestaurante.executor": "Run",
     "JUnit.RestauranteJpaGatewayIT.deveRemoverRestaurante.executor": "Debug",
     "JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia.executor": "Run",
     "JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado.executor": "Debug",
     "JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Run",
-    "JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite.executor": "Run",
     "JUnit.RestauranteJpaGatewayIT.executor": "Run",
     "JUnit.RestauranteJpaGatewayTest.deveAtualizarRestaurante.executor": "Debug",
     "JUnit.RestauranteJpaGatewayTest.deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
@@ -117,7 +147,7 @@
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/guilh/OneDrive/Área de Trabalho/Minha pasta/Faculdade/Pós FIAP/Fases/workspace_all/intellij/workspaces/TechChallenge/Restaurantes",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -126,6 +156,9 @@
       <recent name="C:\Users\guilh\OneDrive\Área de Trabalho\Minha pasta\Faculdade\Pós FIAP\Fases\workspace_all\intellij\workspaces\TechChallenge\Restaurantes\cadastroRestaurante\src" />
       <recent name="C:\Users\guilh\OneDrive\Área de Trabalho\Minha pasta\Faculdade\Pós FIAP\Fases\workspace_all\intellij\workspaces\TechChallenge\Restaurantes" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.restaurantes.cadastro.controller" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="br.com.restaurantes.cadastro.usecase" />
       <recent name="br.com.restaurantes.cadastro.bdd" />
@@ -133,7 +166,7 @@
       <recent name="br.com.restaurantes.cadastro.exception" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RestauranteJpaGatewayIT">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Buscar restaurantes por tipoCozinha">
     <configuration name="RestauranteServiceApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.RestauranteServiceApplication" />
       <module name="Restaurantes" />
@@ -147,79 +180,95 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestauranteJpaGatewayIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: FuncionalidadeRestaurante" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/cadastro/src/test/resources/features/FuncionalidadeRestaurante.feature" />
+      <option name="GLUE" value="br.com.restaurantes.cadastro.bdd" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Restaurantes" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: FuncionalidadeRestaurante" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.restaurantes.cadastro.gateway.database.jpa.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa" />
-      <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa.RestauranteJpaGatewayIT" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Buscar restaurantes por nome" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/cadastro/src/test/resources/features/FuncionalidadeRestaurante.feature" />
+      <option name="GLUE" value="br.com.restaurantes.cadastro.bdd" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Restaurantes" />
+      <option name="NAME_FILTER" value="^Buscar restaurantes por nome$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Buscar restaurantes por nome$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Buscar restaurantes por nome" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.restaurantes.cadastro.gateway.database.jpa.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa" />
-      <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa.RestauranteJpaGatewayIT" />
-      <option name="METHOD_NAME" value="deveVerificarDisponibilidadeLugaresDoRestauranteDeDia" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Buscar restaurantes por tipoCozinha" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/cadastro/src/test/resources/features/FuncionalidadeRestaurante.feature" />
+      <option name="GLUE" value="br.com.restaurantes.cadastro.bdd" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Restaurantes" />
+      <option name="NAME_FILTER" value="^Buscar restaurantes por tipoCozinha$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Buscar restaurantes por tipoCozinha$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Buscar restaurantes por tipoCozinha" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.restaurantes.cadastro.gateway.database.jpa.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa" />
-      <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa.RestauranteJpaGatewayIT" />
-      <option name="METHOD_NAME" value="deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Remover um restaurante" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/cadastro/src/test/resources/features/FuncionalidadeRestaurante.feature" />
+      <option name="GLUE" value="br.com.restaurantes.cadastro.bdd" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Restaurantes" />
+      <option name="NAME_FILTER" value="^Remover um restaurante$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Remover um restaurante$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Remover um restaurante" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.restaurantes.cadastro.gateway.database.jpa.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa" />
-      <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa.RestauranteJpaGatewayIT" />
-      <option name="METHOD_NAME" value="deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestauranteJpaGatewayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CucumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Restaurantes" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.restaurantes.cadastro.gateway.database.jpa.*" />
+          <option name="PATTERN" value="br.com.restaurantes.cadastro.bdd.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa" />
-      <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.gateway.database.jpa.RestauranteJpaGatewayTest" />
+      <option name="PACKAGE_NAME" value="br.com.restaurantes.cadastro.bdd" />
+      <option name="MAIN_CLASS_NAME" value="br.com.restaurantes.cadastro.bdd.CucumberTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -242,20 +291,20 @@
     </configuration>
     <list>
       <item itemvalue="Application.RestauranteServiceApplication" />
+      <item itemvalue="Cucumber Java.Scenario: Buscar restaurantes por nome" />
+      <item itemvalue="Cucumber Java.Scenario: Buscar restaurantes por tipoCozinha" />
+      <item itemvalue="Cucumber Java.Feature: FuncionalidadeRestaurante" />
+      <item itemvalue="Cucumber Java.Scenario: Remover um restaurante" />
       <item itemvalue="Docker.Docker" />
-      <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia" />
-      <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado" />
-      <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite" />
-      <item itemvalue="JUnit.RestauranteJpaGatewayTest" />
-      <item itemvalue="JUnit.RestauranteJpaGatewayIT" />
+      <item itemvalue="JUnit.CucumberTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RestauranteJpaGatewayIT" />
-        <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite" />
-        <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado" />
-        <item itemvalue="JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia" />
-        <item itemvalue="JUnit.RestauranteJpaGatewayTest" />
+        <item itemvalue="Cucumber Java.Scenario: Buscar restaurantes por tipoCozinha" />
+        <item itemvalue="JUnit.CucumberTest" />
+        <item itemvalue="Cucumber Java.Feature: FuncionalidadeRestaurante" />
+        <item itemvalue="Cucumber Java.Scenario: Buscar restaurantes por nome" />
+        <item itemvalue="Cucumber Java.Scenario: Remover um restaurante" />
       </list>
     </recent_temporary>
   </component>
@@ -356,7 +405,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734126862522</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Ajuste dos testes unitários e integrados.">
+      <option name="closed" value="true" />
+      <created>1734135850199</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1734135850199</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -369,7 +426,8 @@
     <MESSAGE value="Ininicando os testes unitários e com cucumber" />
     <MESSAGE value="Iniciando os testes unitários e com cucumber" />
     <MESSAGE value="Continuação dos testes unitários e integrados. Adição da verificação de disponibilidade" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continuação dos testes unitários e integrados. Adição da verificação de disponibilidade" />
+    <MESSAGE value="Ajuste dos testes unitários e integrados." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajuste dos testes unitários e integrados." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -378,11 +436,6 @@
           <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/infraestrutura/GlobalExceptionHandler.java</url>
           <line>15</line>
           <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/usecase/GerenciarRestauranteUsecaseIT.java</url>
@@ -495,11 +548,6 @@
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGatewayIT.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGateway.java</url>
           <line>33</line>
           <option name="timeStamp" value="70" />
@@ -541,21 +589,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGatewayIT.java</url>
-          <line>151</line>
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGatewayIT.java</url>
-          <line>163</line>
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGatewayIT.java</url>
-          <line>175</line>
-          <option name="timeStamp" value="83" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/gateway/database/jpa/RestauranteJpaGatewayIT.java</url>
           <line>184</line>
           <option name="timeStamp" value="84" />
         </line-breakpoint>
@@ -574,6 +607,176 @@
           <line>237</line>
           <option name="timeStamp" value="87" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerTest.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerTest.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerTest.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerTest.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerTest.java</url>
+          <line>161</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerTest.java</url>
+          <line>187</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerIT.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerIT.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerIT.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerIT.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerIT.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerIT.java</url>
+          <line>187</line>
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/controller/RestauranteController.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerIT.java</url>
+          <line>209</line>
+          <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/controller/RestauranteControllerIT.java</url>
+          <line>236</line>
+          <option name="timeStamp" value="140" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="157" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="158" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
+          <line>125</line>
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
+          <line>153</line>
+          <option name="timeStamp" value="160" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
+          <line>161</line>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
+          <line>180</line>
+          <option name="timeStamp" value="163" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
+          <line>197</line>
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
+          <line>213</line>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
+          <line>218</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
+          <line>127</line>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="172" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/RestauranteGateway.java</url>
           <line>10</line>
@@ -587,7 +790,9 @@
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="org.springframework.http.ResponseEntity" memberName="body" />
         <PinnedItemInfo parentTag="java.util.Optional" memberName="value" />
+        <PinnedItemInfo parentTag="java.lang.String" memberName="value" />
         <PinnedItemInfo parentTag="br.com.restaurantes.cadastro.exception.ErroAcessarRepositorioException" memberName="cause" />
       </pinned-members>
     </pin-to-top-manager>
@@ -595,6 +800,15 @@
       <configuration name="JUnit">
         <watch expression="restaurantesRetornados" />
         <watch expression="restauranteRepository" language="JAVA" />
+        <watch expression="restaurantesEsperados.get(0).getId()" language="JAVA" />
+        <watch expression="restauranteJsons.get(0).getId()" />
+        <watch expression="estaurantesRetornados.get(0).getId()" />
+        <watch expression="restaurantesRetornados.get(0).getId()" />
+        <watch expression="restaurantesRetornados.getFirst()" />
+        <watch expression="restaurantesRetornados.getFirst().getId()" />
+      </configuration>
+      <configuration name="CucumberJavaRunConfigurationType">
+        <watch expression="response.getBody()" />
       </configuration>
     </watches-manager>
   </component>

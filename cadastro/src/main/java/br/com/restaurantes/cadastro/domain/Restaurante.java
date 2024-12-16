@@ -3,9 +3,11 @@ package br.com.restaurantes.cadastro.domain;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Restaurante {
 	private Long id;
 	private String nome;

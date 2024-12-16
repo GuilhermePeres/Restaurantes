@@ -1,22 +1,18 @@
 package br.com.restaurantes.cadastro.controller;
 
-import br.com.restaurantes.cadastro.exception.ErroAcessarRepositorioException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
 import br.com.restaurantes.cadastro.controller.json.RestauranteJson;
 import br.com.restaurantes.cadastro.domain.Restaurante;
 import br.com.restaurantes.cadastro.usecase.GerenciarRestauranteUsecase;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@Slf4j
 @RestController
 @RequestMapping("api/v1/restaurantes")
 @RequiredArgsConstructor
@@ -62,11 +58,11 @@ public class RestauranteController {
 
 		return ResponseEntity.ok(restauranteJsons);
 	}
-	///api/v1/restaurantes/disponibilidade?restauranteId=%s&dataReserva=%s
+
 	@GetMapping("disponibilidade")
 	public ResponseEntity<?> verificarDisponibilidadeLugares(
 			@RequestParam Long restauranteId,
-			@RequestParam String dataReserva){ //verificar se é valido
+			@RequestParam String dataReserva){
 		int lugaresDisponiveis = gerenciarRestauranteUsecase.verificarDisponibilidadeLugares(restauranteId, dataReserva);
 
 		return ResponseEntity.ok(lugaresDisponiveis);
