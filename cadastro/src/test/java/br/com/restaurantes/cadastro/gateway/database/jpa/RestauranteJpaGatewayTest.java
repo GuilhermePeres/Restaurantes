@@ -1,6 +1,7 @@
 package br.com.restaurantes.cadastro.gateway.database.jpa;
 
 import br.com.restaurantes.cadastro.domain.Restaurante;
+import br.com.restaurantes.cadastro.exception.ErroAcessarRepositorioException;
 import br.com.restaurantes.cadastro.exception.IllegalArgumentException;
 import br.com.restaurantes.cadastro.exception.RestauranteNaoEncontradoException;
 import br.com.restaurantes.cadastro.gateway.database.jpa.entity.RestauranteEntity;
@@ -18,8 +19,10 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.*;
 
- class RestauranteJpaGatewayTest {
+class RestauranteJpaGatewayTest {
     @InjectMocks
     private RestauranteJpaGateway restauranteJpaGateway;
 
@@ -27,10 +30,12 @@ import static org.junit.jupiter.api.Assertions.*;
     private RestauranteRepository restauranteRepository;
 
     @BeforeEach
-    void setup() { MockitoAnnotations.openMocks(this); }
+    void setup() {
+        MockitoAnnotations.openMocks(this);
+    }
 
     @Test
-     void deveCadastrarRestaurante() {
+    void deveCadastrarRestaurante() {
         Restaurante restaurante = new Restaurante(
                 null,
                 "Restaurante do Jonas",
@@ -55,7 +60,7 @@ import static org.junit.jupiter.api.Assertions.*;
     }
 
     @Test
-     void deveBuscarRestaurantePorNome() {
+    void deveBuscarRestaurantePorNome() {
         String nome = "Restaurante do Jonas";
 
         List<RestauranteEntity> restaurantesEsperados = Arrays.asList(new RestauranteEntity(
@@ -81,17 +86,19 @@ import static org.junit.jupiter.api.Assertions.*;
     }
 
     @Test
-     void deveBuscarRestaurantePorNome_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
+    void deveBuscarRestaurantePorNome_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         String nome = "Restaurante do Jonas";
 
         Mockito.when(restauranteRepository.findByNome(nome)).thenReturn(Collections.emptyList());
 
-        assertThrows(RestauranteNaoEncontradoException.class, () -> {restauranteJpaGateway.buscarRestaurantePorNome(nome);});
+        assertThrows(RestauranteNaoEncontradoException.class, () -> {
+            restauranteJpaGateway.buscarRestaurantePorNome(nome);
+        });
         Mockito.verify(restauranteRepository, Mockito.times(1)).findByNome(nome);
     }
 
     @Test
-     void deveBuscarRestaurantePorTipoCozinha() {
+    void deveBuscarRestaurantePorTipoCozinha() {
         String tipoCozinha = "Italiana";
 
         List<RestauranteEntity> restaurantesEsperados = Arrays.asList(new RestauranteEntity(
@@ -117,17 +124,19 @@ import static org.junit.jupiter.api.Assertions.*;
     }
 
     @Test
-     void deveBuscarRestaurantePorTipoCozinha_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
+    void deveBuscarRestaurantePorTipoCozinha_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         String tipoCozinha = "Italiana";
 
         Mockito.when(restauranteRepository.findByTipoCozinha(tipoCozinha)).thenReturn(Collections.emptyList());
 
-        assertThrows(RestauranteNaoEncontradoException.class, () -> {restauranteJpaGateway.buscarRestaurantePorTipoCozinha(tipoCozinha);});
+        assertThrows(RestauranteNaoEncontradoException.class, () -> {
+            restauranteJpaGateway.buscarRestaurantePorTipoCozinha(tipoCozinha);
+        });
         Mockito.verify(restauranteRepository, Mockito.times(1)).findByTipoCozinha(tipoCozinha);
     }
 
     @Test
-     void deveBuscarRestaurantePorLocalizacao() {
+    void deveBuscarRestaurantePorLocalizacao() {
         String localizacao = "Rua Alves";
 
         List<RestauranteEntity> restaurantesEsperados = Arrays.asList(new RestauranteEntity(
@@ -153,18 +162,20 @@ import static org.junit.jupiter.api.Assertions.*;
     }
 
     @Test
-     void deveBuscarRestaurantePorLocalizacao_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
+    void deveBuscarRestaurantePorLocalizacao_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         String localizacao = "Rua Alves";
 
         Mockito.when(restauranteRepository.findByLocalizacao(localizacao)).thenReturn(Collections.emptyList());
 
-        assertThrows(RestauranteNaoEncontradoException.class, () -> {restauranteJpaGateway.buscarRestaurantePorLocalizacao(localizacao);});
+        assertThrows(RestauranteNaoEncontradoException.class, () -> {
+            restauranteJpaGateway.buscarRestaurantePorLocalizacao(localizacao);
+        });
         Mockito.verify(restauranteRepository, Mockito.times(1)).findByLocalizacao(localizacao);
     }
 
 
     @Test
-     void deveVerificarDisponibilidadeDeLugaresDoRestauranteDeNoite(){
+    void deveVerificarDisponibilidadeDeLugaresDoRestauranteDeNoite() {
         Long id = 1L;
         String dataReserva = "2024-12-11T19:00";
         int lugaresDisponiveisEsperados = 100;
@@ -187,7 +198,7 @@ import static org.junit.jupiter.api.Assertions.*;
     }
 
     @Test
-     void deveVerificarDisponibilidadeDeLugaresDoRestauranteDeDia(){
+    void deveVerificarDisponibilidadeDeLugaresDoRestauranteDeDia() {
         Long id = 1L;
         String dataReserva = "2024-12-11T15:00";
         int lugaresDisponiveisEsperados = 50;
@@ -210,18 +221,20 @@ import static org.junit.jupiter.api.Assertions.*;
     }
 
     @Test
-     void deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
+    void deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         Long id = 1L;
         String dataReserva = "2024-12-11 19:00";
 
         Mockito.when(restauranteRepository.findById(id)).thenReturn(Optional.empty());
 
-        assertThrows(RestauranteNaoEncontradoException.class, () -> {restauranteJpaGateway.verificarDisponibilidadeLugares(id, dataReserva);});
+        assertThrows(RestauranteNaoEncontradoException.class, () -> {
+            restauranteJpaGateway.verificarDisponibilidadeLugares(id, dataReserva);
+        });
         Mockito.verify(restauranteRepository, Mockito.times(1)).findById(id);
     }
 
     @Test
-     void deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado() {
+    void deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado() {
         Long id = 1L;
         String dataReserva = "11-12-2024 19:00";
 
@@ -236,12 +249,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
         Mockito.when(restauranteRepository.findById(id)).thenReturn(restaurantesEsperados);
 
-        assertThrows(IllegalArgumentException.class, () -> {restauranteJpaGateway.verificarDisponibilidadeLugares(id, dataReserva);});
+        assertThrows(IllegalArgumentException.class, () -> {
+            restauranteJpaGateway.verificarDisponibilidadeLugares(id, dataReserva);
+        });
         Mockito.verify(restauranteRepository, Mockito.times(1)).findById(id);
     }
 
     @Test
-     void deveAtualizarRestaurante() {
+    void deveAtualizarRestaurante() {
         Long id = 1L;
 
         Restaurante restauranteAtualizado = new Restaurante(
@@ -287,7 +302,7 @@ import static org.junit.jupiter.api.Assertions.*;
     }
 
     @Test
-     void deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
+    void deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         Long id = 1L;
 
         Restaurante restauranteAtualizado = new Restaurante(
@@ -301,16 +316,30 @@ import static org.junit.jupiter.api.Assertions.*;
 
         Mockito.when(restauranteRepository.findById(id)).thenReturn(Optional.empty());
 
-        assertThrows(RestauranteNaoEncontradoException.class, () -> {restauranteJpaGateway.atualizarRestaurante(id, restauranteAtualizado);});
+        assertThrows(RestauranteNaoEncontradoException.class, () -> {
+            restauranteJpaGateway.atualizarRestaurante(id, restauranteAtualizado);
+        });
         Mockito.verify(restauranteRepository, Mockito.times(1)).findById(id);
     }
 
     @Test
-     void deveRemoverRestaurante() {
+    void deveRemoverRestaurante() {
         Long id = 1L;
 
         restauranteJpaGateway.removerRestaurante(id);
 
         Mockito.verify(restauranteRepository, Mockito.times(1)).deleteById(id);
+    }
+
+    @Test
+    void criar_DeveLancarErroAoAcessarRepositorioException_QuandoOcorreErro() {
+        // Arrange
+        Restaurante restaurante = new Restaurante();
+
+        when(restauranteRepository.save(any(RestauranteEntity.class))).thenThrow(new RuntimeException("Erro ao salvar"));
+
+        // Act & Assert
+        assertThrows(ErroAcessarRepositorioException.class, () -> restauranteJpaGateway.cadastrarRestaurante(restaurante));
+        verify(restauranteRepository, times(1)).save(any(RestauranteEntity.class));
     }
 }
