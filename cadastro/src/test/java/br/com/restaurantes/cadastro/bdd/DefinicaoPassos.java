@@ -123,6 +123,17 @@ public class DefinicaoPassos {
     @Dado("que eu tenho os dados de um restaurante com id")
     public void queEuTenhoOsDadosDeUmRestauranteComId() {
 
+        restauranteJson = new RestauranteJson(
+                null,
+                "Restaurante do Jonas_atualizado",
+                102,
+                "Rua Alves_atualizado",
+                "Italiana_atualizado",
+                "09:00 às 23:00"
+        );
+
+        enviarRequisicaoParaCadastrarORestaurante();
+
         enviarRequisicaoParaBuscarRestaurantesPorNome();
 
         List<Object> restaurantesRetornados = response.as(List.class);

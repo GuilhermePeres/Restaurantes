@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Ajuste de mensagem de retorno." />
+    <list default="true" id="737b8794-6402-4b29-9260-5a869b5ccc56" name="Changes" comment="Ajuste de acordo com as métricas do sonarqube">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,99 +48,99 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.RestauranteServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Feature: FuncionalidadeRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Atualizar um restaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;Cucumber Java.Scenario: Buscar restaurantes por localizacao.executor&quot;: &quot;Debug&quot;,
-    &quot;Cucumber Java.Scenario: Buscar restaurantes por nome.executor&quot;: &quot;Debug&quot;,
-    &quot;Cucumber Java.Scenario: Buscar restaurantes por tipoCozinha.executor&quot;: &quot;Debug&quot;,
-    &quot;Cucumber Java.Scenario: Cadastrar um novo restaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;Cucumber Java.Scenario: Remover um restaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;Cucumber Java.Scenario: Verificar disponibilidade de lugares.executor&quot;: &quot;Debug&quot;,
-    &quot;Docker.Docker.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.cadastro.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.cadastro: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.cadastroRestaurante: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CucumberTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.buscarRestaurantePorLocalizacao.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.buscarRestaurantePorTipoCozinha.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.deveAtualizarRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.deveBuscarRestaurantePorNome.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.deveCadastrarRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.deveRemoverRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.deveVerificarDisponibilidadeLugaresDoRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.deveVerificarDisponibilidadeLugaresdoRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseIT.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.deveAtualizarRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.deveBuscarRestaurantePorLocalizacao.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.deveBuscarRestaurantePorNome.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.deveBuscarRestaurantePorTipoCozinha.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.deveCadastrarRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.deveRemoverRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.testeBuscarRestaurantePorNome_RestauranteEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.GerenciarRestauranteUsecaseTest.testeCadastrarRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteControllerIT.deveAtualizarRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteControllerIT.deveBuscarRestaurantePorLocalizacao.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteControllerIT.deveBuscarRestaurantePorNome.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteControllerIT.deveBuscarRestaurantePorTipoCozinha.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteControllerIT.deveCadastrarRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteControllerIT.deveRemoverRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteControllerIT.deveVerificarDisponibilidadeLugaresDoRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteControllerIT.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteControllerTest.deveAtualizarRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteControllerTest.deveBuscarRestaurantePorLocalizacao.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteControllerTest.deveBuscarRestaurantePorNome.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteControllerTest.deveBuscarRestaurantePorTipoCozinha.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteControllerTest.deveCadastrarRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteControllerTest.deveRemoverRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteControllerTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveAtualizarRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorLocalizacao.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorLocalizacao_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorNome.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorNome_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorTipoCozinha.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorTipoCozinha_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveCadastrarRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveRemoverRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteJpaGatewayIT.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveAtualizarRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorLocalizacao.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorLocalizacao_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorNome.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorNome_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorTipoCozinha.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorTipoCozinha_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveCadastrarRestaurante.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveRemoverRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestauranteDeDia.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestauranteDeNoite.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RestauranteJpaGatewayTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Restaurantes [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Restaurantes [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Restaurantes [package].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/guilh/OneDrive/Área de Trabalho/Minha pasta/Faculdade/Pós FIAP/Fases/workspace_all/intellij/workspaces/TechChallenge/Restaurantes&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.RestauranteServiceApplication.executor": "Run",
+    "Cucumber Java.Feature: FuncionalidadeRestaurante.executor": "Run",
+    "Cucumber Java.Scenario: Atualizar um restaurante.executor": "Run",
+    "Cucumber Java.Scenario: Buscar restaurantes por localizacao.executor": "Run",
+    "Cucumber Java.Scenario: Buscar restaurantes por nome.executor": "Run",
+    "Cucumber Java.Scenario: Buscar restaurantes por tipoCozinha.executor": "Run",
+    "Cucumber Java.Scenario: Cadastrar um novo restaurante.executor": "Run",
+    "Cucumber Java.Scenario: Remover um restaurante.executor": "Run",
+    "Cucumber Java.Scenario: Verificar disponibilidade de lugares.executor": "Run",
+    "Docker.Docker.executor": "Run",
+    "Docker.cadastro.postgres: Compose Deployment.executor": "Run",
+    "Docker.cadastro: Compose Deployment.executor": "Run",
+    "Docker.cadastroRestaurante: Compose Deployment.executor": "Run",
+    "JUnit.CucumberTest.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseIT.buscarRestaurantePorLocalizacao.executor": "Debug",
+    "JUnit.GerenciarRestauranteUsecaseIT.buscarRestaurantePorTipoCozinha.executor": "Debug",
+    "JUnit.GerenciarRestauranteUsecaseIT.deveAtualizarRestaurante.executor": "Debug",
+    "JUnit.GerenciarRestauranteUsecaseIT.deveBuscarRestaurantePorNome.executor": "Debug",
+    "JUnit.GerenciarRestauranteUsecaseIT.deveCadastrarRestaurante.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseIT.deveRemoverRestaurante.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseIT.deveVerificarDisponibilidadeLugaresDoRestaurante.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseIT.deveVerificarDisponibilidadeLugaresdoRestaurante.executor": "Debug",
+    "JUnit.GerenciarRestauranteUsecaseIT.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.deveAtualizarRestaurante.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.deveBuscarRestaurantePorLocalizacao.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.deveBuscarRestaurantePorNome.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.deveBuscarRestaurantePorTipoCozinha.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.deveCadastrarRestaurante.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.deveRemoverRestaurante.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.executor": "Run",
+    "JUnit.GerenciarRestauranteUsecaseTest.testeBuscarRestaurantePorNome_RestauranteEncontrado.executor": "Debug",
+    "JUnit.GerenciarRestauranteUsecaseTest.testeCadastrarRestaurante.executor": "Run",
+    "JUnit.RestauranteControllerIT.deveAtualizarRestaurante.executor": "Debug",
+    "JUnit.RestauranteControllerIT.deveBuscarRestaurantePorLocalizacao.executor": "Run",
+    "JUnit.RestauranteControllerIT.deveBuscarRestaurantePorNome.executor": "Debug",
+    "JUnit.RestauranteControllerIT.deveBuscarRestaurantePorTipoCozinha.executor": "Run",
+    "JUnit.RestauranteControllerIT.deveCadastrarRestaurante.executor": "Debug",
+    "JUnit.RestauranteControllerIT.deveRemoverRestaurante.executor": "Debug",
+    "JUnit.RestauranteControllerIT.deveVerificarDisponibilidadeLugaresDoRestaurante.executor": "Debug",
+    "JUnit.RestauranteControllerIT.executor": "Run",
+    "JUnit.RestauranteControllerTest.deveAtualizarRestaurante.executor": "Run",
+    "JUnit.RestauranteControllerTest.deveBuscarRestaurantePorLocalizacao.executor": "Debug",
+    "JUnit.RestauranteControllerTest.deveBuscarRestaurantePorNome.executor": "Debug",
+    "JUnit.RestauranteControllerTest.deveBuscarRestaurantePorTipoCozinha.executor": "Debug",
+    "JUnit.RestauranteControllerTest.deveCadastrarRestaurante.executor": "Run",
+    "JUnit.RestauranteControllerTest.deveRemoverRestaurante.executor": "Debug",
+    "JUnit.RestauranteControllerTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante.executor": "Debug",
+    "JUnit.RestauranteControllerTest.executor": "Run",
+    "JUnit.RestauranteJpaGatewayIT.deveAtualizarRestaurante.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorLocalizacao.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorLocalizacao_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorNome.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorNome_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorTipoCozinha.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveBuscarRestaurantePorTipoCozinha_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveCadastrarRestaurante.executor": "Run",
+    "JUnit.RestauranteJpaGatewayIT.deveRemoverRestaurante.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia.executor": "Run",
+    "JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Run",
+    "JUnit.RestauranteJpaGatewayIT.deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite.executor": "Run",
+    "JUnit.RestauranteJpaGatewayIT.executor": "Run",
+    "JUnit.RestauranteJpaGatewayTest.deveAtualizarRestaurante.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorLocalizacao.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorLocalizacao_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorNome.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorNome_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorTipoCozinha.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveBuscarRestaurantePorTipoCozinha_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveCadastrarRestaurante.executor": "Run",
+    "JUnit.RestauranteJpaGatewayTest.deveRemoverRestaurante.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestauranteDeDia.executor": "Run",
+    "JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestauranteDeNoite.executor": "Run",
+    "JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado.executor": "Debug",
+    "JUnit.RestauranteJpaGatewayTest.deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado.executor": "Run",
+    "JUnit.RestauranteJpaGatewayTest.executor": "Run",
+    "Maven.Restaurantes [clean].executor": "Run",
+    "Maven.Restaurantes [install].executor": "Run",
+    "Maven.Restaurantes [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/guilh/OneDrive/Área de Trabalho/Minha pasta/Faculdade/Pós FIAP/Fases/workspace_all/intellij/workspaces/TechChallenge/Restaurantes",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\guilh\OneDrive\Área de Trabalho\Minha pasta\Faculdade\Pós FIAP\Fases\workspace_all\intellij\workspaces\TechChallenge\Restaurantes\cadastroRestaurante" />
@@ -187,35 +190,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Buscar restaurantes por nome" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Atualizar um restaurante" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/cadastro/src/test/resources/features/FuncionalidadeRestaurante.feature" />
       <option name="GLUE" value="br.com.restaurantes.cadastro.bdd" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Restaurantes" />
-      <option name="NAME_FILTER" value="^Buscar restaurantes por nome$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Buscar restaurantes por nome$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Buscar restaurantes por nome" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Buscar restaurantes por tipoCozinha" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/cadastro/src/test/resources/features/FuncionalidadeRestaurante.feature" />
-      <option name="GLUE" value="br.com.restaurantes.cadastro.bdd" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Restaurantes" />
-      <option name="NAME_FILTER" value="^Buscar restaurantes por tipoCozinha$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Buscar restaurantes por tipoCozinha$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Buscar restaurantes por tipoCozinha" />
+      <option name="NAME_FILTER" value="^Atualizar um restaurante$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Atualizar um restaurante$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Atualizar um restaurante" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -236,6 +219,26 @@
       <option name="NAME_FILTER" value="^Remover um restaurante$" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Remover um restaurante$&quot;" />
       <option name="SUGGESTED_NAME" value="Scenario: Remover um restaurante" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Verificar disponibilidade de lugares" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/cadastro/src/test/resources/features/FuncionalidadeRestaurante.feature" />
+      <option name="GLUE" value="br.com.restaurantes.cadastro.bdd" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Restaurantes" />
+      <option name="NAME_FILTER" value="^Verificar disponibilidade de lugares$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verificar disponibilidade de lugares$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verificar disponibilidade de lugares" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -279,8 +282,8 @@
     </configuration>
     <list>
       <item itemvalue="Application.RestauranteServiceApplication" />
-      <item itemvalue="Cucumber Java.Scenario: Buscar restaurantes por nome" />
-      <item itemvalue="Cucumber Java.Scenario: Buscar restaurantes por tipoCozinha" />
+      <item itemvalue="Cucumber Java.Scenario: Atualizar um restaurante" />
+      <item itemvalue="Cucumber Java.Scenario: Verificar disponibilidade de lugares" />
       <item itemvalue="Cucumber Java.Feature: FuncionalidadeRestaurante" />
       <item itemvalue="Cucumber Java.Scenario: Remover um restaurante" />
       <item itemvalue="Docker.Docker" />
@@ -290,9 +293,9 @@
       <list>
         <item itemvalue="JUnit.CucumberTest" />
         <item itemvalue="Cucumber Java.Feature: FuncionalidadeRestaurante" />
-        <item itemvalue="Cucumber Java.Scenario: Buscar restaurantes por tipoCozinha" />
-        <item itemvalue="Cucumber Java.Scenario: Buscar restaurantes por nome" />
+        <item itemvalue="Cucumber Java.Scenario: Verificar disponibilidade de lugares" />
         <item itemvalue="Cucumber Java.Scenario: Remover um restaurante" />
+        <item itemvalue="Cucumber Java.Scenario: Atualizar um restaurante" />
       </list>
     </recent_temporary>
   </component>
@@ -425,7 +428,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734388933325</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Ajuste de acordo com as métricas do sonarqube">
+      <option name="closed" value="true" />
+      <created>1734390054478</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1734390054478</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -442,7 +453,8 @@
     <MESSAGE value="Finalização dos testes da aplicação." />
     <MESSAGE value="Arrumando o pom." />
     <MESSAGE value="Ajuste de mensagem de retorno." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajuste de mensagem de retorno." />
+    <MESSAGE value="Ajuste de acordo com as métricas do sonarqube" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajuste de acordo com as métricas do sonarqube" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -729,68 +741,43 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>103</line>
-          <option name="timeStamp" value="156" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>108</line>
-          <option name="timeStamp" value="157" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="158" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>125</line>
-          <option name="timeStamp" value="159" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>152</line>
+          <line>163</line>
           <option name="timeStamp" value="160" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>160</line>
+          <line>171</line>
           <option name="timeStamp" value="162" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>179</line>
+          <line>190</line>
           <option name="timeStamp" value="163" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>196</line>
+          <line>207</line>
           <option name="timeStamp" value="164" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>212</line>
+          <line>223</line>
           <option name="timeStamp" value="168" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>217</line>
+          <line>228</line>
           <option name="timeStamp" value="169" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="170" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>127</line>
+          <line>138</line>
           <option name="timeStamp" value="171" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cadastro/src/test/java/br/com/restaurantes/cadastro/bdd/DefinicaoPassos.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="172" />
+          <line>61</line>
+          <option name="timeStamp" value="174" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/cadastro/src/main/java/br/com/restaurantes/cadastro/gateway/RestauranteGateway.java</url>
