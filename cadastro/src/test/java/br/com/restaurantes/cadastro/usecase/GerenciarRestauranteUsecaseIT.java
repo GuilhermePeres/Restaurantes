@@ -29,7 +29,7 @@ class GerenciarRestauranteUsecaseIT {
 
     @Test
     @Sql(scripts = {"/clean.sql"})
-    public void deveCadastrarRestaurante() {
+     void deveCadastrarRestaurante() {
         Restaurante restaurante = new Restaurante(
                 null,
                 "Tio Zeca Lanches",
@@ -47,7 +47,7 @@ class GerenciarRestauranteUsecaseIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveBuscarRestaurantePorNome() {
+     void deveBuscarRestaurantePorNome() {
         String nome = "Tio Zeca Lanches";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
@@ -72,7 +72,7 @@ class GerenciarRestauranteUsecaseIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveBuscarRestaurantePorTipoCozinha() {
+     void deveBuscarRestaurantePorTipoCozinha() {
         String tipoCozinha = "Restaurante Chinês";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
@@ -97,7 +97,7 @@ class GerenciarRestauranteUsecaseIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveBuscarRestaurantePorLocalizacao() {
+     void deveBuscarRestaurantePorLocalizacao() {
         String localizacao = "Rua Almirante";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
@@ -122,7 +122,7 @@ class GerenciarRestauranteUsecaseIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveVerificarDisponibilidadeLugaresDoRestaurante() {
+     void deveVerificarDisponibilidadeLugaresDoRestaurante() {
         Long id = 1L;
         String dataReserva = "2024-12-11T19:00";
         int lugaresDisponiveisEsperados = 50;
@@ -134,7 +134,7 @@ class GerenciarRestauranteUsecaseIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveAtualizarRestaurante() {
+     void deveAtualizarRestaurante() {
         Long id = 1L;
 
         Restaurante restauranteAtualizado = new Restaurante(
@@ -159,7 +159,7 @@ class GerenciarRestauranteUsecaseIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveRemoverRestaurante() {
+     void deveRemoverRestaurante() {
         Long id = 1L;
 
         gerenciarRestauranteUsecase.removerRestaurante(id);

@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureTestDatabase
-public class RestauranteControllerIT {
+class RestauranteControllerIT {
 
     @Autowired
     RestauranteController restauranteController;
@@ -39,7 +39,7 @@ public class RestauranteControllerIT {
 
     @Test
     @Sql(scripts = {"/clean.sql"})
-    public void deveCadastrarRestaurante() {
+    void deveCadastrarRestaurante() {
         RestauranteJson restauranteJson = new RestauranteJson(
                 null,
                 "Tio Zeca Lanches",
@@ -65,7 +65,7 @@ public class RestauranteControllerIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveBuscarRestaurantePorNome() throws Exception {
+    void deveBuscarRestaurantePorNome() throws Exception {
         String nome = "Tio Zeca Lanches";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
@@ -87,7 +87,7 @@ public class RestauranteControllerIT {
 
         ObjectMapper objectMapper = new ObjectMapper();
 
-        for(Object restauranteObj : restaurantesRetornados){
+        for (Object restauranteObj : restaurantesRetornados) {
             Restaurante restaurante = objectMapper.convertValue(restauranteObj, Restaurante.class);
             restaurantes.add(restaurante);
         }
@@ -103,7 +103,7 @@ public class RestauranteControllerIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveBuscarRestaurantePorTipoCozinha() {
+    void deveBuscarRestaurantePorTipoCozinha() {
         String tipoCozinha = "Restaurante Chinês";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
@@ -125,7 +125,7 @@ public class RestauranteControllerIT {
 
         ObjectMapper objectMapper = new ObjectMapper();
 
-        for(Object restauranteObj : restaurantesRetornados){
+        for (Object restauranteObj : restaurantesRetornados) {
             Restaurante restaurante = objectMapper.convertValue(restauranteObj, Restaurante.class);
             restaurantes.add(restaurante);
         }
@@ -141,7 +141,7 @@ public class RestauranteControllerIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveBuscarRestaurantePorLocalizacao() {
+    void deveBuscarRestaurantePorLocalizacao() {
         String localizacao = "Rua Almirante";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
@@ -162,7 +162,7 @@ public class RestauranteControllerIT {
 
         ObjectMapper objectMapper = new ObjectMapper();
 
-        for(Object restauranteObj : restaurantesRetornados){
+        for (Object restauranteObj : restaurantesRetornados) {
             Restaurante restaurante = objectMapper.convertValue(restauranteObj, Restaurante.class);
             restaurantes.add(restaurante);
         }
@@ -178,12 +178,12 @@ public class RestauranteControllerIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveVerificarDisponibilidadeLugaresDoRestaurante() {
+    void deveVerificarDisponibilidadeLugaresDoRestaurante() {
         Long id = 1L;
         String dataReserva = "2024-12-11T19:00";
         int lugaresDisponiveisEsperados = 50;
 
-        String url = String.format("/api/v1/restaurantes/disponibilidade?restauranteId=%s&dataReserva=%s", id, dataReserva.toString());
+        String url = String.format("/api/v1/restaurantes/disponibilidade?restauranteId=%s&dataReserva=%s", id, dataReserva);
 
         ResponseEntity<Integer> response = restTemplate.getForEntity(url, Integer.class);
 
@@ -193,7 +193,7 @@ public class RestauranteControllerIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveAtualizarRestaurante() throws Throwable {
+    void deveAtualizarRestaurante() throws Throwable {
         Long id = 1L;
 
         Restaurante restauranteAtualizado = new Restaurante(
@@ -231,7 +231,7 @@ public class RestauranteControllerIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveRemoverRestaurante() {
+    void deveRemoverRestaurante() {
         Long id = 1L;
 
         restTemplate.delete("/api/v1/restaurantes/" + id);

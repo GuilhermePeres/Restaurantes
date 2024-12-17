@@ -68,8 +68,6 @@ public class DefinicaoPassos {
 
         assertFalse(restaurantesRetornados.isEmpty());
 
-        List<Restaurante> restaurantes = new ArrayList<>();
-
         ObjectMapper objectMapper = new ObjectMapper();
 
         for(Object restauranteObj : restaurantesRetornados){
@@ -89,8 +87,6 @@ public class DefinicaoPassos {
 
         assertFalse(restaurantesRetornados.isEmpty());
 
-        List<Restaurante> restaurantes = new ArrayList<>();
-
         ObjectMapper objectMapper = new ObjectMapper();
 
         for(Object restauranteObj : restaurantesRetornados){
@@ -109,8 +105,6 @@ public class DefinicaoPassos {
         List<Object> restaurantesRetornados = response.as(List.class);
 
         assertFalse(restaurantesRetornados.isEmpty());
-
-        List<Restaurante> restaurantes = new ArrayList<>();
 
         ObjectMapper objectMapper = new ObjectMapper();
 
@@ -136,7 +130,6 @@ public class DefinicaoPassos {
         for(Object restauranteObj : restaurantesRetornados){
             Restaurante restaurante = objectMapper.convertValue(restauranteObj, Restaurante.class);
             restaurantes.add(restaurante);
-            break;
         }
 
         restauranteJson = new RestauranteJson(

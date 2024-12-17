@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 @AutoConfigureTestDatabase
 @Transactional
-public class RestauranteJpaGatewayIT {
+ class RestauranteJpaGatewayIT {
     @Autowired
     private RestauranteJpaGateway restauranteJpaGateway;
 
@@ -30,7 +30,7 @@ public class RestauranteJpaGatewayIT {
 
     @Test
     @Sql(scripts = {"/clean.sql"})
-    public void deveCadastrarRestaurante() {
+     void deveCadastrarRestaurante() {
         Restaurante restaurante = new Restaurante(
                 null,
                 "Tio Zeca Lanches",
@@ -48,7 +48,7 @@ public class RestauranteJpaGatewayIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveBuscarRestaurantePorNome() {
+     void deveBuscarRestaurantePorNome() {
         String nome = "Tio Zeca Lanches";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
@@ -73,7 +73,7 @@ public class RestauranteJpaGatewayIT {
 
     @Test
     @Sql(scripts = {"/clean.sql"})
-    public void deveBuscarRestaurantePorNome_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
+     void deveBuscarRestaurantePorNome_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         String nome = "Tio Zeca Lanches";
 
         assertThrows(RestauranteNaoEncontradoException.class, () -> {restauranteJpaGateway.buscarRestaurantePorNome(nome);});
@@ -81,7 +81,7 @@ public class RestauranteJpaGatewayIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveBuscarRestaurantePorTipoCozinha() {
+     void deveBuscarRestaurantePorTipoCozinha() {
         String tipoCozinha = "Restaurante Chinês";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
@@ -106,7 +106,7 @@ public class RestauranteJpaGatewayIT {
 
     @Test
     @Sql(scripts = {"/clean.sql"})
-    public void deveBuscarRestaurantePorTipoCozinha_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
+     void deveBuscarRestaurantePorTipoCozinha_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         String tipoCozinha = "Restaurante Chinês";
 
         assertThrows(RestauranteNaoEncontradoException.class, () -> {restauranteJpaGateway.buscarRestaurantePorTipoCozinha(tipoCozinha);});
@@ -114,7 +114,7 @@ public class RestauranteJpaGatewayIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveBuscarRestaurantePorLocalizacao() {
+     void deveBuscarRestaurantePorLocalizacao() {
         String localizacao = "Rua Almirante";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
@@ -139,7 +139,7 @@ public class RestauranteJpaGatewayIT {
 
     @Test
     @Sql(scripts = {"/clean.sql"})
-    public void deveBuscarRestaurantePorLocalizacao_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
+     void deveBuscarRestaurantePorLocalizacao_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         String localizacao = "Rua Almirante";
 
         assertThrows(RestauranteNaoEncontradoException.class, () -> {restauranteJpaGateway.buscarRestaurantePorLocalizacao(localizacao);});
@@ -148,7 +148,7 @@ public class RestauranteJpaGatewayIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite() {
+     void deveVerificarDisponibilidadeLugaresDoRestauranteDeNoite() {
         Long id = 1L;
         String dataReserva = "2024-12-11T19:00";
         int lugaresDisponiveisEsperados = 50;
@@ -160,7 +160,7 @@ public class RestauranteJpaGatewayIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveVerificarDisponibilidadeLugaresDoRestauranteDeDia() {
+     void deveVerificarDisponibilidadeLugaresDoRestauranteDeDia() {
         Long id = 1L;
         String dataReserva = "2024-12-11T15:00";
         int lugaresDisponiveisEsperados = 25;
@@ -172,7 +172,7 @@ public class RestauranteJpaGatewayIT {
 
     @Test
     @Sql(scripts = {"/clean.sql"})
-    public void deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
+     void deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         Long id = 1L;
         String dataReserva = "2024-12-11T19:00";
 
@@ -181,7 +181,7 @@ public class RestauranteJpaGatewayIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado() {
+     void deveVerificarDisponibilidadeLugaresDoRestauranteDeDia_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado() {
         Long id = 1L;
         String dataReserva = "11-12-2024 19:00";
 
@@ -190,7 +190,7 @@ public class RestauranteJpaGatewayIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveAtualizarRestaurante() {
+     void deveAtualizarRestaurante() {
         Long id = 1L;
 
         Restaurante restauranteAtualizado = new Restaurante(
@@ -215,7 +215,7 @@ public class RestauranteJpaGatewayIT {
 
     @Test
     @Sql(scripts = {"/clean.sql"})
-    public void deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
+     void deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         Long id = 1L;
 
         Restaurante restauranteAtualizado = new Restaurante(
@@ -232,7 +232,7 @@ public class RestauranteJpaGatewayIT {
 
     @Test
     @Sql(scripts = {"/clean.sql", "/restaurante.sql"})
-    public void deveRemoverRestaurante() {
+     void deveRemoverRestaurante() {
         Long id = 1L;
 
         restauranteJpaGateway.removerRestaurante(id);

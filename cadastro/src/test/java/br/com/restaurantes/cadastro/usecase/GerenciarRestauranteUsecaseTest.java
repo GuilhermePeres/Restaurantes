@@ -16,7 +16,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class GerenciarRestauranteUsecaseTest {
+ class GerenciarRestauranteUsecaseTest {
     @InjectMocks
     private GerenciarRestauranteUsecase gerenciarRestauranteUsecase;
 
@@ -27,7 +27,7 @@ public class GerenciarRestauranteUsecaseTest {
     void setup() { MockitoAnnotations.openMocks(this); }
 
     @Test
-    public void deveCadastrarRestaurante() {
+     void deveCadastrarRestaurante() {
         Restaurante restaurante = new Restaurante(
                 null,
                 "Restaurante do Jonas",
@@ -43,7 +43,7 @@ public class GerenciarRestauranteUsecaseTest {
     }
 
     @Test
-    public void deveBuscarRestaurantePorNome() {
+     void deveBuscarRestaurantePorNome() {
         String nome = "Restaurante do Jonas";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
@@ -69,7 +69,7 @@ public class GerenciarRestauranteUsecaseTest {
     }
 
     @Test
-    public void deveBuscarRestaurantePorTipoCozinha() {
+     void deveBuscarRestaurantePorTipoCozinha() {
         String tipoCozinha = "Italiana";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
@@ -95,7 +95,7 @@ public class GerenciarRestauranteUsecaseTest {
     }
 
     @Test
-    public void deveBuscarRestaurantePorLocalizacao() {
+     void deveBuscarRestaurantePorLocalizacao() {
         String localizacao = "Rua Alves";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
@@ -121,7 +121,7 @@ public class GerenciarRestauranteUsecaseTest {
     }
 
     @Test
-    public void deveVerificarDisponibilidadeDeLugaresDoRestaurante(){
+     void deveVerificarDisponibilidadeDeLugaresDoRestaurante(){
         Long id = 1L;
         String dataReserva = "2024-12-11T19:00";
         int lugaresDisponiveisEsperados = 50;
@@ -135,7 +135,7 @@ public class GerenciarRestauranteUsecaseTest {
     }
 
     @Test
-    public void deveAtualizarRestaurante() {
+     void deveAtualizarRestaurante() {
         Long id = 1L;
 
         Restaurante restauranteAtualizado = new Restaurante(
@@ -162,7 +162,7 @@ public class GerenciarRestauranteUsecaseTest {
     }
 
     @Test
-    public void deveRemoverRestaurante() {
+     void deveRemoverRestaurante() {
         Long id = 1L;
 
         gerenciarRestauranteUsecase.removerRestaurante(id);

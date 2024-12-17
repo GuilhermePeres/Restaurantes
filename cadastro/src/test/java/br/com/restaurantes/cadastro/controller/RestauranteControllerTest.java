@@ -23,7 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(RestauranteController.class)
-public class RestauranteControllerTest {
+ class RestauranteControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -35,7 +35,7 @@ public class RestauranteControllerTest {
     private GerenciarRestauranteUsecase gerenciarRestauranteUsecase;
 
     @Test
-    public void deveCadastrarRestaurante() throws Exception {
+     void deveCadastrarRestaurante() throws Exception {
         RestauranteJson restauranteJson = new RestauranteJson(
                 null,
                 "Restaurante do Jonas",
@@ -54,7 +54,7 @@ public class RestauranteControllerTest {
     }
 
     @Test
-    public void deveBuscarRestaurantePorNome() throws Exception {
+     void deveBuscarRestaurantePorNome() throws Exception {
         String nome = "Restaurante do Jonas";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
@@ -82,7 +82,7 @@ public class RestauranteControllerTest {
     }
 
     @Test
-    public void deveBuscarRestaurantePorTipoCozinha() throws Exception {
+     void deveBuscarRestaurantePorTipoCozinha() throws Exception {
         String tipoCozinha = "Italiana";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
@@ -110,7 +110,7 @@ public class RestauranteControllerTest {
     }
 
     @Test
-    public void deveBuscarRestaurantePorLocalizacao() throws Exception {
+     void deveBuscarRestaurantePorLocalizacao() throws Exception {
         String localizacao = "Rua Alves";
 
         List<Restaurante> restaurantesEsperados = Arrays.asList(new Restaurante(
@@ -138,7 +138,7 @@ public class RestauranteControllerTest {
     }
 
     @Test
-    public void deveVerificarDisponibilidadeDeLugaresDoRestaurante() throws Exception {
+     void deveVerificarDisponibilidadeDeLugaresDoRestaurante() throws Exception {
         Long id = 1L;
         String dataReserva = "2024-12-11T19:00";
         int lugaresDisponiveisEsperados = 100;
@@ -156,7 +156,7 @@ public class RestauranteControllerTest {
     }
 
     @Test
-    public void deveAtualizarRestaurante() throws Exception {
+     void deveAtualizarRestaurante() throws Exception {
         Long id = 1L;
 
         Restaurante restauranteAtualizado = new Restaurante(
@@ -197,7 +197,7 @@ public class RestauranteControllerTest {
     }
 
     @Test
-    public void deveRemoverRestaurante() throws Exception {
+     void deveRemoverRestaurante() throws Exception {
         Long id = 1L;
 
         mockMvc.perform(delete("/api/v1/restaurantes/{id}", id)

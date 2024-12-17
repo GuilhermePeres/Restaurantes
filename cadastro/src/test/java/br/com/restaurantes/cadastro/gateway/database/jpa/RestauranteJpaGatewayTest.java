@@ -19,7 +19,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class RestauranteJpaGatewayTest {
+ class RestauranteJpaGatewayTest {
     @InjectMocks
     private RestauranteJpaGateway restauranteJpaGateway;
 
@@ -30,7 +30,7 @@ public class RestauranteJpaGatewayTest {
     void setup() { MockitoAnnotations.openMocks(this); }
 
     @Test
-    public void deveCadastrarRestaurante() {
+     void deveCadastrarRestaurante() {
         Restaurante restaurante = new Restaurante(
                 null,
                 "Restaurante do Jonas",
@@ -55,7 +55,7 @@ public class RestauranteJpaGatewayTest {
     }
 
     @Test
-    public void deveBuscarRestaurantePorNome() {
+     void deveBuscarRestaurantePorNome() {
         String nome = "Restaurante do Jonas";
 
         List<RestauranteEntity> restaurantesEsperados = Arrays.asList(new RestauranteEntity(
@@ -81,7 +81,7 @@ public class RestauranteJpaGatewayTest {
     }
 
     @Test
-    public void deveBuscarRestaurantePorNome_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
+     void deveBuscarRestaurantePorNome_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         String nome = "Restaurante do Jonas";
 
         Mockito.when(restauranteRepository.findByNome(nome)).thenReturn(Collections.emptyList());
@@ -91,7 +91,7 @@ public class RestauranteJpaGatewayTest {
     }
 
     @Test
-    public void deveBuscarRestaurantePorTipoCozinha() {
+     void deveBuscarRestaurantePorTipoCozinha() {
         String tipoCozinha = "Italiana";
 
         List<RestauranteEntity> restaurantesEsperados = Arrays.asList(new RestauranteEntity(
@@ -117,7 +117,7 @@ public class RestauranteJpaGatewayTest {
     }
 
     @Test
-    public void deveBuscarRestaurantePorTipoCozinha_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
+     void deveBuscarRestaurantePorTipoCozinha_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         String tipoCozinha = "Italiana";
 
         Mockito.when(restauranteRepository.findByTipoCozinha(tipoCozinha)).thenReturn(Collections.emptyList());
@@ -127,7 +127,7 @@ public class RestauranteJpaGatewayTest {
     }
 
     @Test
-    public void deveBuscarRestaurantePorLocalizacao() {
+     void deveBuscarRestaurantePorLocalizacao() {
         String localizacao = "Rua Alves";
 
         List<RestauranteEntity> restaurantesEsperados = Arrays.asList(new RestauranteEntity(
@@ -153,7 +153,7 @@ public class RestauranteJpaGatewayTest {
     }
 
     @Test
-    public void deveBuscarRestaurantePorLocalizacao_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
+     void deveBuscarRestaurantePorLocalizacao_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         String localizacao = "Rua Alves";
 
         Mockito.when(restauranteRepository.findByLocalizacao(localizacao)).thenReturn(Collections.emptyList());
@@ -164,7 +164,7 @@ public class RestauranteJpaGatewayTest {
 
 
     @Test
-    public void deveVerificarDisponibilidadeDeLugaresDoRestauranteDeNoite(){
+     void deveVerificarDisponibilidadeDeLugaresDoRestauranteDeNoite(){
         Long id = 1L;
         String dataReserva = "2024-12-11T19:00";
         int lugaresDisponiveisEsperados = 100;
@@ -187,7 +187,7 @@ public class RestauranteJpaGatewayTest {
     }
 
     @Test
-    public void deveVerificarDisponibilidadeDeLugaresDoRestauranteDeDia(){
+     void deveVerificarDisponibilidadeDeLugaresDoRestauranteDeDia(){
         Long id = 1L;
         String dataReserva = "2024-12-11T15:00";
         int lugaresDisponiveisEsperados = 50;
@@ -210,7 +210,7 @@ public class RestauranteJpaGatewayTest {
     }
 
     @Test
-    public void deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
+     void deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         Long id = 1L;
         String dataReserva = "2024-12-11 19:00";
 
@@ -221,7 +221,7 @@ public class RestauranteJpaGatewayTest {
     }
 
     @Test
-    public void deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado() {
+     void deveVerificarDisponibilidadeDeLugaresDoRestaurante_LancarIllegalArgumentException_QuandoDataReservaComFormatoInesperado() {
         Long id = 1L;
         String dataReserva = "11-12-2024 19:00";
 
@@ -241,7 +241,7 @@ public class RestauranteJpaGatewayTest {
     }
 
     @Test
-    public void deveAtualizarRestaurante() {
+     void deveAtualizarRestaurante() {
         Long id = 1L;
 
         Restaurante restauranteAtualizado = new Restaurante(
@@ -287,7 +287,7 @@ public class RestauranteJpaGatewayTest {
     }
 
     @Test
-    public void deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
+     void deveAtualizarRestaurante_LancarRestauranteNaoEncontradoException_QuandoRestauranteNaoForEncontrado() {
         Long id = 1L;
 
         Restaurante restauranteAtualizado = new Restaurante(
@@ -306,7 +306,7 @@ public class RestauranteJpaGatewayTest {
     }
 
     @Test
-    public void deveRemoverRestaurante() {
+     void deveRemoverRestaurante() {
         Long id = 1L;
 
         restauranteJpaGateway.removerRestaurante(id);
